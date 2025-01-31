@@ -14,7 +14,6 @@ export class AppService {
             const data = fs.readFileSync(
                 path.join(process.cwd(), 'userworlds/', user + '-world.json'),
             );
-            this.logger.log('User world data read successfully');
             return JSON.parse(data.toString());
         } catch (e: unknown) {
             console.log((e as Error).message);
