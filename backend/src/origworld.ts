@@ -25,7 +25,16 @@ export const origworld = {
                 {
                     name: 'Paper is beautiful !',
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 20,
+                    seuil: 25,
+                    idcible: 1,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 50,
                     idcible: 1,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
@@ -34,12 +43,39 @@ export const origworld = {
                 {
                     name: "Don't forget your paper bag !",
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 75,
+                    seuil: 100,
                     idcible: 1,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
-                }
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 200,
+                    idcible: 1,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 300,
+                    idcible: 1,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 400,
+                    idcible: 1,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
             ]
         },
         {
@@ -55,23 +91,59 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Give me some good bins !',
-                    logo: 'icones/recyclage.jpg',
-                    seuil: 20,
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 25,
                     idcible: 2,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
                 },
                 {
-                    name: 'My Trashcans are better than yours !',
-                    logo: 'icones/recyclage.jpg',
-                    seuil: 75,
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 50,
                     idcible: 2,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
-                }
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 100,
+                    idcible: 2,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 200,
+                    idcible: 2,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 300,
+                    idcible: 2,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 400,
+                    idcible: 2,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
             ]
         },
         {
@@ -89,7 +161,16 @@ export const origworld = {
                 {
                     name: 'Paper is beautiful !',
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 20,
+                    seuil: 25,
+                    idcible: 3,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 50,
                     idcible: 3,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
@@ -98,12 +179,39 @@ export const origworld = {
                 {
                     name: "Don't forget your paper bag !",
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 75,
+                    seuil: 100,
                     idcible: 3,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
-                }
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 200,
+                    idcible: 3,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 300,
+                    idcible: 3,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 400,
+                    idcible: 3,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
             ]
         },
         {
@@ -121,7 +229,16 @@ export const origworld = {
                 {
                     name: 'Paper is beautiful !',
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 20,
+                    seuil: 25,
+                    idcible: 4,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 50,
                     idcible: 4,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
@@ -130,12 +247,39 @@ export const origworld = {
                 {
                     name: "Don't forget your paper bag !",
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 75,
+                    seuil: 100,
                     idcible: 4,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
-                }
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 200,
+                    idcible: 4,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 300,
+                    idcible: 4,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 400,
+                    idcible: 2,
+                    ratio: 4,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
             ]
         },
         {
@@ -153,7 +297,16 @@ export const origworld = {
                 {
                     name: 'Paper is beautiful !',
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 20,
+                    seuil: 25,
+                    idcible: 5,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 50,
                     idcible: 5,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
@@ -162,12 +315,40 @@ export const origworld = {
                 {
                     name: "Don't forget your paper bag !",
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 75,
+                    seuil: 100,
+                    idcible: 5,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 200,
+                    idcible: 5,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 300,
+                    idcible: 5,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 400,
                     idcible: 5,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
                 }
+
             ]
         },
         {
@@ -185,7 +366,16 @@ export const origworld = {
                 {
                     name: 'Paper is beautiful !',
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 20,
+                    seuil: 25,
+                    idcible: 6,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 50,
                     idcible: 6,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
@@ -194,12 +384,40 @@ export const origworld = {
                 {
                     name: "Don't forget your paper bag !",
                     logo: 'icones/sacpapier.jpg',
-                    seuil: 75,
+                    seuil: 100,
+                    idcible: 6,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: "Don't forget your paper bag !",
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 200,
+                    idcible: 6,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 300,
+                    idcible: 6,
+                    ratio: 2,
+                    typeratio: RatioType.vitesse,
+                    unlocked: false
+                },
+                {
+                    name: 'Paper is beautiful !',
+                    logo: 'icones/sacpapier.jpg',
+                    seuil: 400,
                     idcible: 6,
                     ratio: 2,
                     typeratio: RatioType.vitesse,
                     unlocked: false
                 }
+
             ]
         },
     ],
@@ -209,19 +427,28 @@ export const origworld = {
             logo: 'icones/all.jpg',
             seuil: 30,
             idcible: 0,
-            ratio: 2,
+            ratio: 3,
             typeratio: RatioType.gain,
             unlocked: false
         },
         {
             name: 'To take and not to give',
             logo: 'icones/all.jpg',
-            seuil: 150,
+            seuil: 90,
             idcible: 0,
             ratio: 3,
             typeratio: RatioType.gain,
             unlocked: false
-        }
+        },
+        {
+            name: 'All is better than one',
+            logo: 'icones/all.jpg',
+            seuil: 270,
+            idcible: 0,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
     ],
     upgrades: [
         {
@@ -287,12 +514,75 @@ export const origworld = {
             typeratio: RatioType.gain,
             unlocked: false
         },
+        {
+            name: 'Do you like paper bag ?',
+            logo: 'icones/sacpapier.jpg',
+            seuil: 10000000000,
+            idcible: 1,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
+        {
+            name: 'This is my bin',
+            logo: 'icones/recyclage.jpg',
+            seuil: 50000000000,
+            idcible: 2,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
+        {
+            name: 'Do you like paper bag ?',
+            logo: 'icones/sacpapier.jpg',
+            seuil: 250000000000,
+            idcible: 3,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
+        {
+            name: 'This is my bin',
+            logo: 'icones/recyclage.jpg',
+            seuil: 1000000000000,
+            idcible: 4,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
+        {
+            name: 'Do you like paper bag ?',
+            logo: 'icones/sacpapier.jpg',
+            seuil: 20000000000000,
+            idcible: 5,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
+        {
+            name: 'This is my bin',
+            logo: 'icones/recyclage.jpg',
+            seuil: 50000000000000,
+            idcible: 6,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
+        {
+            name: 'This is my bin',
+            logo: 'icones/recyclage.jpg',
+            seuil: 100000000000000,
+            idcible: 0,
+            ratio: 3,
+            typeratio: RatioType.gain,
+            unlocked: false
+        },
     ],
     angelupgrades: [
         {
             name: 'Angel Sacrifice',
             logo: 'icones/angel.png',
-            seuil: 10,
+            seuil: 10000,
             idcible: 0,
             ratio: 3,
             typeratio: RatioType.gain,
@@ -306,7 +596,25 @@ export const origworld = {
             ratio: 2,
             typeratio: RatioType.ange,
             unlocked: false
-        }
+        },
+        {
+            name: 'Angelic Mutiny',
+            logo: 'icones/angel.png',
+            seuil: 100000000,
+            idcible: -1,
+            ratio: 2,
+            typeratio: RatioType.ange,
+            unlocked: false
+        },
+        {
+            name: 'Angelic Mutiny',
+            logo: 'icones/angel.png',
+            seuil: 1000000000,
+            idcible: 0,
+            ratio: 5,
+            typeratio: RatioType.ange,
+            unlocked: false
+        },
     ],
     managers: [
         {
