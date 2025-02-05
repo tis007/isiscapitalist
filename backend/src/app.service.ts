@@ -23,6 +23,7 @@ export class AppService {
 
 
     saveWorld(user: string, world: World) {
+        this.updateWorld(world);
         fs.writeFile(
             path.join(process.cwd(), 'userworlds/', user + '-world.json'),
             JSON.stringify(world),
@@ -62,10 +63,47 @@ export class AppService {
         return product;
     }
 
+
+    lancerProductionProduit(user: string, id: number): Product {
+        let world = this.readUserWorld(user);
+        this.updateWorld(world);
+
+        let product = world.products.find((p) => p.id === id);
+        if (!product) {
+            throw new Error(`Le produit avec l'id ${id} n'existe pas`);
+        }
+
+        product.timeleft = product.vitesse;
+
+        this.saveWorld(user, world);
+
+        return product;
+    }
+
+    engagerManager(user: string, id: number) {
+        let world = this.readUserWorld(user);
+        this.updateWorld(world);
+
+        let manager = world.managers.find((m) => m.idcible === id);
+        if (!manager) {
+            throw new Error(`Le manager du produit avec l'id ${id} n'existe pas`);
+        }
+        if (world.money < manager.seuil) {
+            throw new Error(`Pas assez d'argent pour engager le manager du produit avec l'id ${id}`);
+        }
+        if (manager.unlocked) {
+            throw new Error(`Le manager du produit avec l'id ${id} est déjà engagé`);
+        }
+
+        world.money -= manager.seuil;
+        manager.unlocked = true;
+
+        this.saveWorld(user, world);
+
+        return manager;
+    }
+
     checkUnlocks(world: World, product: Product) {
-
-        //TODO : REFAIRE METHODE EN FONCTIONE DE L'IDCIBLE (0 = affects all profits, -1 = angel effectivness + x%)
-
         // specific unlocks
         this.checkProductUnlocks(world, product);
 
@@ -103,17 +141,17 @@ export class AppService {
             if (!product) {
                 throw new Error(`Le produit avec l'id ${palier.idcible} n'existe pas`);
             }
-            this.applyBonusForProduct(product, palier);
+            this.applyBonusForProduct(world, product, palier);
         }
 
         if (palier.idcible === 0) {
             world.products.forEach(product => {
-                this.applyBonusForProduct(product, palier);
+                this.applyBonusForProduct(world, product, palier);
             });
         }
     }
 
-    applyBonusForProduct(product: Product, palier: Palier) {
+    applyBonusForProduct(world: World, product: Product, palier: Palier) {
         switch (palier.typeratio) {
             case "gain":
                 product.revenu *= palier.ratio;
@@ -122,6 +160,8 @@ export class AppService {
                 product.vitesse /= palier.ratio;
                 break;
         }
+
+        this.updateWorld(world);
     }
 
 
