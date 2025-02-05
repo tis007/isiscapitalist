@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-start-page',
@@ -11,5 +12,10 @@ import {NgOptimizedImage} from '@angular/common';
   styleUrl: './start-page.component.css'
 })
 export class StartPageComponent {
-
+ constructor(private router : Router) {
+ }
+  startGame() {
+   //on ajoute une condition selon l'utilisateur pour la redirection vers le bon monde
+    this.router.navigate(['/mainPageWorld1'])
+  }
 }
