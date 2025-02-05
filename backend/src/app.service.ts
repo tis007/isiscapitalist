@@ -1,7 +1,7 @@
 import {Injectable, Logger} from '@nestjs/common';
 import * as fs from 'fs';
 import * as path from 'path';
-import {World} from "./graphql";
+import {Palier, Product, World} from "./graphql";
 import {origworld} from "./origworld";
 import {AppController} from "./app.controller";
 
@@ -22,7 +22,7 @@ export class AppService {
     }
 
 
-     saveWorld(user: string, world: World) {
+    saveWorld(user: string, world: World) {
         fs.writeFile(
             path.join(process.cwd(), 'userworlds/', user + '-world.json'),
             JSON.stringify(world),
@@ -33,5 +33,120 @@ export class AppService {
                 }
             },
         );
+    }
+
+    acheterQtProduit(user: string, id: number, quantite: number): Product {
+        let world = this.readUserWorld(user);
+        this.updateWorld(world);
+
+        let product = world.products.find((p) => p.id === id);
+        if (!product) {
+            throw new Error(`Le produit avec l'id ${id} n'existe pas`);
+        }
+
+        //price calculation
+        let prixNeeded = product.cout * ((1 - Math.pow(product.croissance, quantite)) / (1 - product.croissance));
+
+        if (prixNeeded > world.money) {
+            throw new Error(`Pas assez d'argent pour acheter ${quantite} ${product.name}`);
+        }
+
+        world.money -= prixNeeded;
+        product.quantite += quantite;
+        product.cout = product.cout * Math.pow(product.croissance, quantite);
+
+        this.checkUnlocks(world, product);
+
+        this.saveWorld(user, world);
+
+        return product;
+    }
+
+    checkUnlocks(world: World, product: Product) {
+
+        //TODO : REFAIRE METHODE EN FONCTIONE DE L'IDCIBLE (0 = affects all profits, -1 = angel effectivness + x%)
+
+        // specific unlocks
+        this.checkProductUnlocks(world, product);
+
+        // allunlocks
+        this.checkAllUnlocks(world);
+    }
+
+    checkProductUnlocks(world: World, product: Product) {
+        product.paliers.forEach(palier => {
+            if (!palier.unlocked && product.quantite >= palier.seuil) {
+                palier.unlocked = true;
+                this.applyBonus(world, palier);
+            }
+        });
+    }
+
+    checkAllUnlocks(world: World) {
+        let productQuantityTotal = 0;
+        world.products.forEach(product => {
+            productQuantityTotal += product.quantite;
+        })
+
+        world.allunlocks.forEach(palier => {
+            if (!palier.unlocked && productQuantityTotal >= palier.seuil) {
+                palier.unlocked = true;
+                this.applyBonus(world, palier);
+            }
+        });
+
+    }
+
+    applyBonus(world: World, palier: Palier) {
+        if (palier.idcible >= 0) {
+            let product = world.products.find((p) => p.id === palier.idcible);
+            if (!product) {
+                throw new Error(`Le produit avec l'id ${palier.idcible} n'existe pas`);
+            }
+            this.applyBonusForProduct(product, palier);
+        }
+
+        if (palier.idcible === 0) {
+            world.products.forEach(product => {
+                this.applyBonusForProduct(product, palier);
+            });
+        }
+    }
+
+    applyBonusForProduct(product: Product, palier: Palier) {
+        switch (palier.typeratio) {
+            case "gain":
+                product.revenu *= palier.ratio;
+                break;
+            case "vitesse":
+                product.vitesse /= palier.ratio;
+                break;
+        }
+    }
+
+
+    updateWorld(world: World): void {
+        const currentTime = Date.now();
+        const elapsedTime = (currentTime - world.lastupdate) / 1000; // Convert to seconds
+
+        world.products.forEach(product => {
+            if (product.managerUnlocked) {
+                let productionCount = 1 + Math.floor((elapsedTime - product.timeleft) / product.vitesse);
+                const remainingTime = (elapsedTime - product.timeleft) % product.vitesse;
+
+                world.money += productionCount * product.revenu * product.quantite;
+                product.timeleft = product.vitesse - remainingTime;
+            } else {
+                if (product.timeleft > 0) {
+                    if (product.timeleft <= elapsedTime) {
+                        world.money += product.revenu * product.quantite;
+                        product.timeleft = 0;
+                    } else {
+                        product.timeleft -= elapsedTime;
+                    }
+                }
+            }
+        });
+        world.lastupdate = currentTime;
     }
 }

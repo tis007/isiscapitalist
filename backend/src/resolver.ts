@@ -12,6 +12,8 @@ export class GraphQlResolver {
     async getWorld(@Args('user') user: string) {
         let world = this.service.readUserWorld(user);
         this.service.saveWorld(user, world);
+        this.service.updateWorld(world);
+
         return world;
     }
 
@@ -21,27 +23,8 @@ export class GraphQlResolver {
         @Args('user') user: string,
         @Args('id') id: number,
         @Args('quantite') quantite: number,
-    ): Promise<Product> {
-
-        let world = this.service.readUserWorld(user);
-
-        let product = world.products.find((p) => p.id === id);
-        if (!product) {
-            throw new Error(`Le produit avec l'id ${id} n'existe pas`)
-        }
-        let prixNeeded = product.cout * ((1 - Math.pow(product.croissance, quantite)) / (1 - product.croissance));
-
-        if (prixNeeded > world.money) {
-            throw new Error(`Pas assez d'argent pour acheter ${quantite} ${product.name}`);
-        }
-
-        world.money -= prixNeeded;
-        product.quantite += quantite;
-        product.cout = product.cout * Math.pow(product.croissance, quantite);
-
-        this.service.saveWorld(user, world);
-
-        return product;
+    ){
+        return this.service.acheterQtProduit(user, id, quantite);
     }
 
 
@@ -51,6 +34,7 @@ export class GraphQlResolver {
         @Args('id') id: number,
     ): Promise<Product> {
         let world = this.service.readUserWorld(user);
+        this.service.updateWorld(world);
 
         let product = world.products.find((p) => p.id === id);
         if (!product) {
@@ -70,6 +54,7 @@ export class GraphQlResolver {
         @Args('id') id: number,
     ){
         let world = this.service.readUserWorld(user);
+        this.service.updateWorld(world);
 
         let manager = world.managers.find((m) => m.idcible === id);
         if (!manager) {
