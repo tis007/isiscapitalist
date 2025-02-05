@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Luckiest_Guy';
+  src: url('assets/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'EXO2';
+  src: url('assets/fonts/Exo_2/Exo2-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

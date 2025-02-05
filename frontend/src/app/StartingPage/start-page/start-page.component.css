@@ -1,0 +1,29 @@
+.startPageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.game_name{
+  font-family: "Luckiest_Guy";
+  font-size: 56px;
+}
+.credentials{
+  width: 330px;
+  padding-top: 10px;
+  input{
+    font-family: "Lucida Sans";
+    font-size: 14px;
+    background-color: #DBE3E3;
+    text-align: center;
+  }
+}
+.startbtn{
+  padding-top: 25px;
+}
+button{
+  font-family: Luckiest_Guy;
+  color: black;
+  width: 122px;
+  background-color: #67C591;
+}
