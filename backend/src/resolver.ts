@@ -42,4 +42,20 @@ export class GraphQlResolver {
     ) {
         return this.service.engagerManager(user, id);
     }
+
+    @Mutation()
+    async acheterCashUpgrade(
+        @Args('user') user: string,
+        @Args('id') id: number,
+    ) {
+        return this.service.acheterCashUpgrade(user, id);
+    }
+
+    @Mutation()
+    async acheterAngelUpgrade(
+        @Args('user') user: string,
+        @Args('id') id: number,
+    ) {
+        return this.service.acheterAngelUpgrade(user, id);
+    }
 }

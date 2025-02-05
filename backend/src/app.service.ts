@@ -104,6 +104,7 @@ export class AppService {
     }
 
     checkUnlocks(world: World, product: Product) {
+        this.updateWorld(world);
         // specific unlocks
         this.checkProductUnlocks(world, product);
 
@@ -159,9 +160,62 @@ export class AppService {
             case "vitesse":
                 product.vitesse /= palier.ratio;
                 break;
+            case "ange":
+                world.angelbonus += palier.ratio;
+                break;
         }
 
         this.updateWorld(world);
+    }
+
+
+    acheterCashUpgrade(user: string, id: number): Palier {
+        let world = this.readUserWorld(user);
+        this.updateWorld(world);
+
+        let upgrade = world.upgrades.find((u) => u.idcible === id);
+        if (!upgrade) {
+            throw new Error(`L'upgrade avec l'id ${id} n'existe pas`);
+        }
+        if (world.money < upgrade.seuil) {
+            throw new Error(`Pas assez d'argent pour acheter l'upgrade ${upgrade.name}`);
+        }
+        if (upgrade.unlocked) {
+            throw new Error(`L'upgrade ${upgrade.name} est déjà débloqué`);
+        }
+
+        world.money -= upgrade.seuil;
+        upgrade.unlocked = true;
+        this.applyBonus(world, upgrade);
+
+        this.saveWorld(user, world);
+
+        return upgrade;
+    }
+
+
+    acheterAngelUpgrade(user: string, id: number): Palier {
+        let world = this.readUserWorld(user);
+        this.updateWorld(world);
+
+        let upgrade = world.angelupgrades.find((u) => u.idcible === id);
+        if (!upgrade) {
+            throw new Error(`L'upgrade avec l'id ${id} n'existe pas`);
+        }
+        if (world.activeangels < upgrade.seuil) {
+            throw new Error(`Pas assez d'anges pour acheter l'upgrade ${upgrade.name}`);
+        }
+        if (upgrade.unlocked) {
+            throw new Error(`L'upgrade ${upgrade.name} est déjà débloqué`);
+        }
+
+        world.activeangels -= upgrade.seuil;
+        upgrade.unlocked = true;
+        this.applyBonus(world, upgrade);
+
+        this.saveWorld(user, world);
+
+        return upgrade;
     }
 
 
@@ -169,17 +223,20 @@ export class AppService {
         const currentTime = Date.now();
         const elapsedTime = (currentTime - world.lastupdate) / 1000; // Convert to seconds
 
+        let moneyMade = 0;
         world.products.forEach(product => {
             if (product.managerUnlocked) {
                 let productionCount = 1 + Math.floor((elapsedTime - product.timeleft) / product.vitesse);
                 const remainingTime = (elapsedTime - product.timeleft) % product.vitesse;
 
-                world.money += productionCount * product.revenu * product.quantite;
+                moneyMade += productionCount * product.revenu * product.quantite * (1 + world.activeangels *(world.angelbonus/100));
+
                 product.timeleft = product.vitesse - remainingTime;
             } else {
                 if (product.timeleft > 0) {
                     if (product.timeleft <= elapsedTime) {
-                        world.money += product.revenu * product.quantite;
+                        moneyMade += product.revenu * product.quantite * (1 + world.activeangels *(world.angelbonus/100));
+
                         product.timeleft = 0;
                     } else {
                         product.timeleft -= elapsedTime;
@@ -187,6 +244,9 @@ export class AppService {
                 }
             }
         });
+
+        world.money += moneyMade;
+        world.score += moneyMade;
         world.lastupdate = currentTime;
     }
 }
