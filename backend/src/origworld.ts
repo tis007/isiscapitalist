@@ -2,7 +2,7 @@ import { RatioType } from './graphql';
 
 export const origworld = {
     name: 'A Nice World 2',
-    logo: 'icones/surgeon_navbar.jpg',
+    logo: 'icones/surgeon_navbar.png',
     money: 0,
     score: 0,
     totalangels: 0,
@@ -24,7 +24,7 @@ export const origworld = {
             paliers: [
                 {
                     name: 'Black Market Surge',
-                    logo: 'icones/kidney/kidney_unlock.jpg',
+                    logo: 'icones/kidney/kidney_unlock.png',
                     seuil: 25,
                     idcible: 1,
                     ratio: 2,
@@ -33,7 +33,7 @@ export const origworld = {
                 },
                 {
                     name: 'Double Filtration Power',
-                    logo: 'icones/kidney/kidney_unlock.jpg',
+                    logo: 'icones/kidney/kidney_unlock.png',
                     seuil: 50,
                     idcible: 1,
                     ratio: 2,
@@ -42,7 +42,7 @@ export const origworld = {
                 },
                 {
                     name: "Kidney Kings",
-                    logo: 'icones/kidney/kidney_unlock.jpg',
+                    logo: 'icones/kidney/kidney_unlock.png',
                     seuil: 100,
                     idcible: 1,
                     ratio: 2,
@@ -51,7 +51,7 @@ export const origworld = {
                 },
                 {
                     name: "Renal Runners",
-                    logo: 'icones/kidney/kidney_unlock.jpg',
+                    logo: 'icones/kidney/kidney_unlock.png',
                     seuil: 200,
                     idcible: 1,
                     ratio: 2,
@@ -60,7 +60,7 @@ export const origworld = {
                 },
                 {
                     name: 'Golden Kidney Standard',
-                    logo: 'icones/kidney/kidney_unlock.jpg',
+                    logo: 'icones/kidney/kidney_unlock.png',
                     seuil: 300,
                     idcible: 1,
                     ratio: 2,
@@ -69,7 +69,7 @@ export const origworld = {
                 },
                 {
                     name: 'Pee-Profit Pipeline',
-                    logo: 'icones/kidney/kidney_unlock.jpg',
+                    logo: 'icones/kidney/kidney_unlock.png',
                     seuil: 400,
                     idcible: 1,
                     ratio: 2,
@@ -92,7 +92,7 @@ export const origworld = {
             paliers: [
                 {
                     name: 'Premium Detox Plan',
-                    logo: 'icones/liver/liver_unlock.jpg',
+                    logo: 'icones/liver/liver_unlock.png',
                     seuil: 25,
                     idcible: 2,
                     ratio: 2,
@@ -101,7 +101,7 @@ export const origworld = {
                 },
                 {
                     name: 'Hepatic Hustle',
-                    logo: 'icones/liver/liver_unlock.jpg',
+                    logo: 'icones/liver/liver_unlock.png',
                     seuil: 50,
                     idcible: 2,
                     ratio: 2,
@@ -110,7 +110,7 @@ export const origworld = {
                 },
                 {
                     name: "Booze Recycler",
-                    logo: 'icones/liver/liver_unlock.jpg',
+                    logo: 'icones/liver/liver_unlock.png',
                     seuil: 100,
                     idcible: 2,
                     ratio: 2,
@@ -119,7 +119,7 @@ export const origworld = {
                 },
                 {
                     name: "Infinite Regeneration",
-                    logo: 'icones/liver/liver_unlock.jpg',
+                    logo: 'icones/liver/liver_unlock.png',
                     seuil: 200,
                     idcible: 2,
                     ratio: 2,
@@ -128,7 +128,7 @@ export const origworld = {
                 },
                 {
                     name: 'Liver Liquidity',
-                    logo: 'icones/liver/liver_unlock.jpg',
+                    logo: 'icones/liver/liver_unlock.png',
                     seuil: 300,
                     idcible: 2,
                     ratio: 2,
@@ -137,7 +137,7 @@ export const origworld = {
                 },
                 {
                     name: 'Fatty Liver Fortune',
-                    logo: 'icones/liver/liver_unlock.jpg',
+                    logo: 'icones/liver/liver_unlock.png',
                     seuil: 400,
                     idcible: 2,
                     ratio: 2,
@@ -160,7 +160,7 @@ export const origworld = {
             paliers: [
                 {
                     name: 'Lung Expansion Project',
-                    logo: 'icones/lung/lung_unlock.jpg',
+                    logo: 'icones/lung/lung_unlock.png',
                     seuil: 25,
                     idcible: 3,
                     ratio: 2,
@@ -169,7 +169,7 @@ export const origworld = {
                 },
                 {
                     name: 'Carbon Cash-Out',
-                    logo: 'icones/lung/lung_unlock.jpg',
+                    logo: 'icones/lung/lung_unlock.png',
                     seuil: 50,
                     idcible: 3,
                     ratio: 2,
@@ -178,7 +178,7 @@ export const origworld = {
                 },
                 {
                     name: "Double Oxygen Yield",
-                    logo: 'icones/lung/lung_unlock.jpg',
+                    logo: 'icones/lung/lung_unlock.png',
                     seuil: 100,
                     idcible: 3,
                     ratio: 2,
@@ -187,7 +187,7 @@ export const origworld = {
                 },
                 {
                     name: "Smoke-Proof Supply Chain",
-                    logo: 'icones/lung/lung_unlock.jpg',
+                    logo: 'icones/lung/lung_unlock.png',
                     seuil: 200,
                     idcible: 3,
                     ratio: 2,
@@ -196,7 +196,7 @@ export const origworld = {
                 },
                 {
                     name: 'Breath of Profits',
-                    logo: 'icones/lung/lung_unlock.jpg',
+                    logo: 'icones/lung/lung_unlock.png',
                     seuil: 300,
                     idcible: 3,
                     ratio: 2,
@@ -205,7 +205,7 @@ export const origworld = {
                 },
                 {
                     name: 'Windpipe Winners',
-                    logo: 'icones/lung/lung_unlock.jpg',
+                    logo: 'icones/lung/lung_unlock.png',
                     seuil: 400,
                     idcible: 3,
                     ratio: 2,
@@ -228,7 +228,7 @@ export const origworld = {
             paliers: [
                 {
                     name: 'Cardio Capital',
-                    logo: 'icones/heart/heart_unlock.jpg',
+                    logo: 'icones/heart/heart_unlock.png',
                     seuil: 25,
                     idcible: 4,
                     ratio: 2,
@@ -237,7 +237,7 @@ export const origworld = {
                 },
                 {
                     name: 'Beating the Competition',
-                    logo: 'icones/heart/heart_unlock.jpg',
+                    logo: 'icones/heart/heart_unlock.png',
                     seuil: 50,
                     idcible: 4,
                     ratio: 2,
@@ -246,7 +246,7 @@ export const origworld = {
                 },
                 {
                     name: "Pumping Profits",
-                    logo: 'icones/heart/heart_unlock.jpg',
+                    logo: 'icones/heart/heart_unlock.png',
                     seuil: 100,
                     idcible: 4,
                     ratio: 2,
@@ -255,7 +255,7 @@ export const origworld = {
                 },
                 {
                     name: "Heart Throb Hustle",
-                    logo: 'icones/heart/heart_unlock.jpg',
+                    logo: 'icones/heart/heart_unlock.png',
                     seuil: 200,
                     idcible: 4,
                     ratio: 2,
@@ -264,7 +264,7 @@ export const origworld = {
                 },
                 {
                     name: 'Artery Empire',
-                    logo: 'icones/heart/heart_unlock.jpg',
+                    logo: 'icones/heart/heart_unlock.png',
                     seuil: 300,
                     idcible: 4,
                     ratio: 2,
@@ -273,7 +273,7 @@ export const origworld = {
                 },
                 {
                     name: 'Valves of Gold',
-                    logo: 'icones/heart/heart_unlock.jpg',
+                    logo: 'icones/heart/heart_unlock.png',
                     seuil: 400,
                     idcible: 2,
                     ratio: 4,
@@ -296,7 +296,7 @@ export const origworld = {
             paliers: [
                 {
                     name: 'Visionary Ventures',
-                    logo: 'icones/eyeball/eyeball_unlock.jpg',
+                    logo: 'icones/eyeball/eyeball_unlock.png',
                     seuil: 25,
                     idcible: 5,
                     ratio: 2,
@@ -305,7 +305,7 @@ export const origworld = {
                 },
                 {
                     name: 'Eyeball Market Expansion',
-                    logo: 'icones/eyeball/eyeball_unlock.jpg',
+                    logo: 'icones/eyeball/eyeball_unlock.png',
                     seuil: 50,
                     idcible: 5,
                     ratio: 2,
@@ -314,7 +314,7 @@ export const origworld = {
                 },
                 {
                     name: "Retina Riches",
-                    logo: 'icones/eyeball/eyeball_unlock.jpg',
+                    logo: 'icones/eyeball/eyeball_unlock.png',
                     seuil: 100,
                     idcible: 5,
                     ratio: 2,
@@ -323,7 +323,7 @@ export const origworld = {
                 },
                 {
                     name: "The All-Seeing Business",
-                    logo: 'icones/eyeball/eyeball_unlock.jpg',
+                    logo: 'icones/eyeball/eyeball_unlock.png',
                     seuil: 200,
                     idcible: 5,
                     ratio: 2,
@@ -332,7 +332,7 @@ export const origworld = {
                 },
                 {
                     name: 'Optic Boom',
-                    logo: 'icones/eyeball/eyeball_unlock.jpg',
+                    logo: 'icones/eyeball/eyeball_unlock.png',
                     seuil: 300,
                     idcible: 5,
                     ratio: 2,
@@ -341,7 +341,7 @@ export const origworld = {
                 },
                 {
                     name: 'Pupil Profiteers',
-                    logo: 'icones/eyeball/eyeball_unlock.jpg',
+                    logo: 'icones/eyeball/eyeball_unlock.png',
                     seuil: 400,
                     idcible: 5,
                     ratio: 2,
@@ -365,7 +365,7 @@ export const origworld = {
             paliers: [
                 {
                     name: 'Neural Network',
-                    logo: 'icones/brain/brain_unlock.jpg',
+                    logo: 'icones/brain/brain_unlock.png',
                     seuil: 25,
                     idcible: 6,
                     ratio: 2,
@@ -374,7 +374,7 @@ export const origworld = {
                 },
                 {
                     name: 'Genius Harvest',
-                    logo: 'icones/brain/brain_unlock.jpg',
+                    logo: 'icones/brain/brain_unlock.png',
                     seuil: 50,
                     idcible: 6,
                     ratio: 2,
@@ -383,7 +383,7 @@ export const origworld = {
                 },
                 {
                     name: "IQ Investment",
-                    logo: 'icones/brain/brain_unlock.jpg',
+                    logo: 'icones/brain/brain_unlock.png',
                     seuil: 100,
                     idcible: 6,
                     ratio: 2,
@@ -392,7 +392,7 @@ export const origworld = {
                 },
                 {
                     name: "Think Tank Tycoons",
-                    logo: 'icones/brain/brain_unlock.jpg',
+                    logo: 'icones/brain/brain_unlock.png',
                     seuil: 200,
                     idcible: 6,
                     ratio: 2,
@@ -401,7 +401,7 @@ export const origworld = {
                 },
                 {
                     name: 'Mind Over Money',
-                    logo: 'icones/brain/brain_unlock.jpg',
+                    logo: 'icones/brain/brain_unlock.png',
                     seuil: 300,
                     idcible: 6,
                     ratio: 2,
@@ -410,7 +410,7 @@ export const origworld = {
                 },
                 {
                     name: 'Gray Matter Goldmine',
-                    logo: 'icones/brain/brain_unlock.jpg',
+                    logo: 'icones/brain/brain_unlock.png',
                     seuil: 400,
                     idcible: 6,
                     ratio: 2,
@@ -424,7 +424,7 @@ export const origworld = {
     allunlocks: [
         {
             name: 'Organs Work Better Together',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 30,
             idcible: 0,
             ratio: 3,
@@ -433,7 +433,7 @@ export const origworld = {
         },
         {
             name: 'The Human Body is a Goldmine',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 90,
             idcible: 0,
             ratio: 3,
@@ -442,7 +442,7 @@ export const origworld = {
         },
         {
             name: 'Harvesting Synergy',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 270,
             idcible: 0,
             ratio: 3,
@@ -453,7 +453,7 @@ export const origworld = {
     upgrades: [
         {
             name: 'Black-Market Dialysis',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 250000,
             idcible: 1,
             ratio: 3,
@@ -462,7 +462,7 @@ export const origworld = {
         },
         {
             name: 'The Hangover Cure Empire',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 500000,
             idcible: 2,
             ratio: 3,
@@ -471,7 +471,7 @@ export const origworld = {
         },
         {
             name: 'Extra Breath, Extra Cash',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 1000000,
             idcible: 3,
             ratio: 3,
@@ -480,7 +480,7 @@ export const origworld = {
         },
         {
             name: 'More Beats Per Minute',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 5000000,
             idcible: 4,
             ratio: 3,
@@ -489,7 +489,7 @@ export const origworld = {
         },
         {
             name: 'Retina Resale Boom',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 10000000,
             idcible: 5,
             ratio: 3,
@@ -498,7 +498,7 @@ export const origworld = {
         },
         {
             name: 'Neuron Negotiations',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 25000000,
             idcible: 6,
             ratio: 3,
@@ -507,7 +507,7 @@ export const origworld = {
         },
         {
             name: 'The Ultimate Chop Shop',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 500000000,
             idcible: 0,
             ratio: 3,
@@ -516,7 +516,7 @@ export const origworld = {
         },
         {
             name: 'Two is Good, Three is Better',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 10000000000,
             idcible: 1,
             ratio: 3,
@@ -525,7 +525,7 @@ export const origworld = {
         },
         {
             name: 'Regrow & Resell',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 50000000000,
             idcible: 2,
             ratio: 3,
@@ -534,7 +534,7 @@ export const origworld = {
         },
         {
             name: 'Asthma-Proof Airways',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 250000000000,
             idcible: 3,
             ratio: 3,
@@ -543,7 +543,7 @@ export const origworld = {
         },
         {
             name: 'Multi-Hearted Mogul',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 1000000000000,
             idcible: 4,
             ratio: 3,
@@ -552,7 +552,7 @@ export const origworld = {
         },
         {
             name: 'The Collector’s Edition',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 20000000000000,
             idcible: 5,
             ratio: 3,
@@ -561,7 +561,7 @@ export const origworld = {
         },
         {
             name: 'Einstein Extraction',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 50000000000000,
             idcible: 6,
             ratio: 3,
@@ -570,7 +570,7 @@ export const origworld = {
         },
         {
             name: 'Doctor’s Special Combo',
-            logo: 'icones/all_unlock.jpg',
+            logo: 'icones/all_unlock.png',
             seuil: 100000000000000,
             idcible: 0,
             ratio: 3,
@@ -619,7 +619,7 @@ export const origworld = {
     managers: [
         {
             name: 'Dr. Slice McGreedy',
-            logo: 'icones/managers/manager_1.jpg',
+            logo: 'icones/managers/manager_1.png',
             seuil: 1000,
             idcible: 1,
             ratio: 0,
@@ -628,7 +628,7 @@ export const origworld = {
         },
         {
             name: 'Dr. Bypass Betty',
-            logo: 'icones/managers/manager_2.jpg',
+            logo: 'icones/managers/manager_2.png',
             seuil: 15000,
             idcible: 2,
             ratio: 0,
@@ -637,7 +637,7 @@ export const origworld = {
         },
         {
             name: 'Dr. FrankenFunds',
-            logo: 'icones/managers/manager_3.jpg',
+            logo: 'icones/managers/manager_3.png',
             seuil: 100000,
             idcible: 3,
             ratio: 0,
@@ -646,7 +646,7 @@ export const origworld = {
         },
         {
             name: 'Dr. Igor Patchwork',
-            logo: 'icones/managers/manager_4.jpg',
+            logo: 'icones/managers/manager_4.png',
             seuil: 500000,
             idcible: 4,
             ratio: 0,
@@ -655,7 +655,7 @@ export const origworld = {
         },
         {
             name: 'Chainsaw Charlie',
-            logo: 'icones/managers/manager_5.jpg',
+            logo: 'icones/managers/manager_5.png',
             seuil: 1200000,
             idcible: 5,
             ratio: 0,
@@ -664,7 +664,7 @@ export const origworld = {
         },
         {
             name: 'The Midnight Butcher',
-            logo: 'icones/managers/manger_5.jpg',
+            logo: 'icones/managers/manger_5.png',
             seuil: 10000000,
             idcible: 6,
             ratio: 0,
