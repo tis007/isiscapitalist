@@ -58,4 +58,11 @@ export class GraphQlResolver {
     ) {
         return this.service.acheterAngelUpgrade(user, id);
     }
+
+    @Mutation()
+    async resetWorld(
+        @Args('user') user: string,
+    ): Promise<World> {
+        return this.service.worldReset(user);
+    }
 }

@@ -23,7 +23,6 @@ export class AppService {
 
 
     saveWorld(user: string, world: World) {
-        this.updateWorld(world);
         fs.writeFile(
             path.join(process.cwd(), 'userworlds/', user + '-world.json'),
             JSON.stringify(world),
@@ -166,6 +165,7 @@ export class AppService {
         }
 
         this.updateWorld(world);
+        this.saveWorld(world.name, world);
     }
 
 
@@ -218,6 +218,30 @@ export class AppService {
         return upgrade;
     }
 
+    worldReset(user: string): World {
+        let world = this.readUserWorld(user);
+        this.updateWorld(world);
+
+        // Calculate additional angels gained
+        const additionalAngels = Math.floor(150 * Math.sqrt(world.score / Math.pow(10, 5))) - world.totalangels;
+        world.totalangels += additionalAngels;
+        world.activeangels += additionalAngels;
+
+        // Preserve score and angel properties
+        const score = world.score;
+        const totalangels = world.totalangels;
+        const activeangels = world.activeangels;
+
+        // Reset world to its initial state
+        world = <World>origworld;
+        world.score = score;
+        world.totalangels = totalangels;
+        world.activeangels = activeangels;
+
+        this.saveWorld(user, world);
+
+        return world;
+    }
 
     updateWorld(world: World): void {
         const currentTime = Date.now();
