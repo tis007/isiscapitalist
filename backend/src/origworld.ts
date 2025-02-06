@@ -2,7 +2,7 @@ import { RatioType } from './graphql';
 
 export const origworld = {
     name: 'A Nice World 2',
-    logo: 'icones/ecolo.jpg',
+    logo: 'icones/surgeon_navbar.jpg',
     money: 0,
     score: 0,
     totalangels: 0,
@@ -12,8 +12,8 @@ export const origworld = {
     products: [
         {
             id: 1,
-            name: 'Paper Bags',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Kidneys',
+            logo: 'icones/kidney/kidneys.gif',
             cout: 4,
             croissance: 1.07,
             revenu: 1,
@@ -23,8 +23,8 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Black Market Surge',
+                    logo: 'icones/kidney/kidney_unlock.jpg',
                     seuil: 25,
                     idcible: 1,
                     ratio: 2,
@@ -32,8 +32,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Double Filtration Power',
+                    logo: 'icones/kidney/kidney_unlock.jpg',
                     seuil: 50,
                     idcible: 1,
                     ratio: 2,
@@ -41,8 +41,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Kidney Kings",
+                    logo: 'icones/kidney/kidney_unlock.jpg',
                     seuil: 100,
                     idcible: 1,
                     ratio: 2,
@@ -50,8 +50,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Renal Runners",
+                    logo: 'icones/kidney/kidney_unlock.jpg',
                     seuil: 200,
                     idcible: 1,
                     ratio: 2,
@@ -59,8 +59,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Golden Kidney Standard',
+                    logo: 'icones/kidney/kidney_unlock.jpg',
                     seuil: 300,
                     idcible: 1,
                     ratio: 2,
@@ -68,8 +68,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Pee-Profit Pipeline',
+                    logo: 'icones/kidney/kidney_unlock.jpg',
                     seuil: 400,
                     idcible: 1,
                     ratio: 2,
@@ -80,8 +80,8 @@ export const origworld = {
         },
         {
             id: 2,
-            name: 'Recycle Bins',
-            logo: 'icones/recyclage.jpg',
+            name: 'Livers',
+            logo: 'icones/liver/liver.gif',
             cout: 60,
             croissance: 1.15,
             revenu: 60,
@@ -91,8 +91,8 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Premium Detox Plan',
+                    logo: 'icones/liver/liver_unlock.jpg',
                     seuil: 25,
                     idcible: 2,
                     ratio: 2,
@@ -100,8 +100,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Hepatic Hustle',
+                    logo: 'icones/liver/liver_unlock.jpg',
                     seuil: 50,
                     idcible: 2,
                     ratio: 2,
@@ -109,8 +109,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Booze Recycler",
+                    logo: 'icones/liver/liver_unlock.jpg',
                     seuil: 100,
                     idcible: 2,
                     ratio: 2,
@@ -118,8 +118,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Infinite Regeneration",
+                    logo: 'icones/liver/liver_unlock.jpg',
                     seuil: 200,
                     idcible: 2,
                     ratio: 2,
@@ -127,8 +127,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Liver Liquidity',
+                    logo: 'icones/liver/liver_unlock.jpg',
                     seuil: 300,
                     idcible: 2,
                     ratio: 2,
@@ -136,8 +136,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Fatty Liver Fortune',
+                    logo: 'icones/liver/liver_unlock.jpg',
                     seuil: 400,
                     idcible: 2,
                     ratio: 2,
@@ -148,8 +148,8 @@ export const origworld = {
         },
         {
             id: 3,
-            name: 'Paper Bags',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Lungs',
+            logo: 'icones/lung/lung.gif',
             cout: 720,
             croissance: 1.14,
             revenu: 540,
@@ -159,8 +159,8 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Lung Expansion Project',
+                    logo: 'icones/lung/lung_unlock.jpg',
                     seuil: 25,
                     idcible: 3,
                     ratio: 2,
@@ -168,8 +168,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Carbon Cash-Out',
+                    logo: 'icones/lung/lung_unlock.jpg',
                     seuil: 50,
                     idcible: 3,
                     ratio: 2,
@@ -177,8 +177,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Double Oxygen Yield",
+                    logo: 'icones/lung/lung_unlock.jpg',
                     seuil: 100,
                     idcible: 3,
                     ratio: 2,
@@ -186,8 +186,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Smoke-Proof Supply Chain",
+                    logo: 'icones/lung/lung_unlock.jpg',
                     seuil: 200,
                     idcible: 3,
                     ratio: 2,
@@ -195,8 +195,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Breath of Profits',
+                    logo: 'icones/lung/lung_unlock.jpg',
                     seuil: 300,
                     idcible: 3,
                     ratio: 2,
@@ -204,8 +204,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Windpipe Winners',
+                    logo: 'icones/lung/lung_unlock.jpg',
                     seuil: 400,
                     idcible: 3,
                     ratio: 2,
@@ -216,8 +216,8 @@ export const origworld = {
         },
         {
             id: 4,
-            name: 'Paper Bags',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Hearts',
+            logo: 'icones/heart/heart.gif',
             cout: 8640,
             croissance: 1.13,
             revenu: 4320,
@@ -227,8 +227,8 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Cardio Capital',
+                    logo: 'icones/heart/heart_unlock.jpg',
                     seuil: 25,
                     idcible: 4,
                     ratio: 2,
@@ -236,8 +236,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Beating the Competition',
+                    logo: 'icones/heart/heart_unlock.jpg',
                     seuil: 50,
                     idcible: 4,
                     ratio: 2,
@@ -245,8 +245,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Pumping Profits",
+                    logo: 'icones/heart/heart_unlock.jpg',
                     seuil: 100,
                     idcible: 4,
                     ratio: 2,
@@ -254,8 +254,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Heart Throb Hustle",
+                    logo: 'icones/heart/heart_unlock.jpg',
                     seuil: 200,
                     idcible: 4,
                     ratio: 2,
@@ -263,8 +263,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Artery Empire',
+                    logo: 'icones/heart/heart_unlock.jpg',
                     seuil: 300,
                     idcible: 4,
                     ratio: 2,
@@ -272,8 +272,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Valves of Gold',
+                    logo: 'icones/heart/heart_unlock.jpg',
                     seuil: 400,
                     idcible: 2,
                     ratio: 4,
@@ -284,8 +284,8 @@ export const origworld = {
         },
         {
             id: 5,
-            name: 'Paper Bags',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Eye balls',
+            logo: 'icones/eyeball/eyeball.gif',
             cout: 103680,
             croissance: 1.12,
             revenu: 51840,
@@ -295,8 +295,8 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Visionary Ventures',
+                    logo: 'icones/eyeball/eyeball_unlock.jpg',
                     seuil: 25,
                     idcible: 5,
                     ratio: 2,
@@ -304,8 +304,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Eyeball Market Expansion',
+                    logo: 'icones/eyeball/eyeball_unlock.jpg',
                     seuil: 50,
                     idcible: 5,
                     ratio: 2,
@@ -313,8 +313,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Retina Riches",
+                    logo: 'icones/eyeball/eyeball_unlock.jpg',
                     seuil: 100,
                     idcible: 5,
                     ratio: 2,
@@ -322,8 +322,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "The All-Seeing Business",
+                    logo: 'icones/eyeball/eyeball_unlock.jpg',
                     seuil: 200,
                     idcible: 5,
                     ratio: 2,
@@ -331,8 +331,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Optic Boom',
+                    logo: 'icones/eyeball/eyeball_unlock.jpg',
                     seuil: 300,
                     idcible: 5,
                     ratio: 2,
@@ -340,8 +340,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Pupil Profiteers',
+                    logo: 'icones/eyeball/eyeball_unlock.jpg',
                     seuil: 400,
                     idcible: 5,
                     ratio: 2,
@@ -353,8 +353,8 @@ export const origworld = {
         },
         {
             id: 6,
-            name: 'Paper Bags',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Brains',
+            logo: 'icones/brain/brain.gif',
             cout: 1244160,
             croissance: 1.11,
             revenu: 622080,
@@ -364,8 +364,8 @@ export const origworld = {
             managerUnlocked: false,
             paliers: [
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Neural Network',
+                    logo: 'icones/brain/brain_unlock.jpg',
                     seuil: 25,
                     idcible: 6,
                     ratio: 2,
@@ -373,8 +373,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Genius Harvest',
+                    logo: 'icones/brain/brain_unlock.jpg',
                     seuil: 50,
                     idcible: 6,
                     ratio: 2,
@@ -382,8 +382,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "IQ Investment",
+                    logo: 'icones/brain/brain_unlock.jpg',
                     seuil: 100,
                     idcible: 6,
                     ratio: 2,
@@ -391,8 +391,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: "Don't forget your paper bag !",
-                    logo: 'icones/sacpapier.jpg',
+                    name: "Think Tank Tycoons",
+                    logo: 'icones/brain/brain_unlock.jpg',
                     seuil: 200,
                     idcible: 6,
                     ratio: 2,
@@ -400,8 +400,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Mind Over Money',
+                    logo: 'icones/brain/brain_unlock.jpg',
                     seuil: 300,
                     idcible: 6,
                     ratio: 2,
@@ -409,8 +409,8 @@ export const origworld = {
                     unlocked: false
                 },
                 {
-                    name: 'Paper is beautiful !',
-                    logo: 'icones/sacpapier.jpg',
+                    name: 'Gray Matter Goldmine',
+                    logo: 'icones/brain/brain_unlock.jpg',
                     seuil: 400,
                     idcible: 6,
                     ratio: 2,
@@ -423,8 +423,8 @@ export const origworld = {
     ],
     allunlocks: [
         {
-            name: 'All is better than one',
-            logo: 'icones/all.jpg',
+            name: 'Organs Work Better Together',
+            logo: 'icones/all_unlock.jpg',
             seuil: 30,
             idcible: 0,
             ratio: 3,
@@ -432,8 +432,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'To take and not to give',
-            logo: 'icones/all.jpg',
+            name: 'The Human Body is a Goldmine',
+            logo: 'icones/all_unlock.jpg',
             seuil: 90,
             idcible: 0,
             ratio: 3,
@@ -441,8 +441,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'All is better than one',
-            logo: 'icones/all.jpg',
+            name: 'Harvesting Synergy',
+            logo: 'icones/all_unlock.jpg',
             seuil: 270,
             idcible: 0,
             ratio: 3,
@@ -452,8 +452,8 @@ export const origworld = {
     ],
     upgrades: [
         {
-            name: 'Do you like paper bag ?',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Black-Market Dialysis',
+            logo: 'icones/all_unlock.jpg',
             seuil: 250000,
             idcible: 1,
             ratio: 3,
@@ -461,8 +461,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'The Hangover Cure Empire',
+            logo: 'icones/all_unlock.jpg',
             seuil: 500000,
             idcible: 2,
             ratio: 3,
@@ -470,8 +470,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Do you like paper bag ?',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Extra Breath, Extra Cash',
+            logo: 'icones/all_unlock.jpg',
             seuil: 1000000,
             idcible: 3,
             ratio: 3,
@@ -479,8 +479,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'More Beats Per Minute',
+            logo: 'icones/all_unlock.jpg',
             seuil: 5000000,
             idcible: 4,
             ratio: 3,
@@ -488,8 +488,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Do you like paper bag ?',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Retina Resale Boom',
+            logo: 'icones/all_unlock.jpg',
             seuil: 10000000,
             idcible: 5,
             ratio: 3,
@@ -497,8 +497,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'Neuron Negotiations',
+            logo: 'icones/all_unlock.jpg',
             seuil: 25000000,
             idcible: 6,
             ratio: 3,
@@ -506,8 +506,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'The Ultimate Chop Shop',
+            logo: 'icones/all_unlock.jpg',
             seuil: 500000000,
             idcible: 0,
             ratio: 3,
@@ -515,8 +515,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Do you like paper bag ?',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Two is Good, Three is Better',
+            logo: 'icones/all_unlock.jpg',
             seuil: 10000000000,
             idcible: 1,
             ratio: 3,
@@ -524,8 +524,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'Regrow & Resell',
+            logo: 'icones/all_unlock.jpg',
             seuil: 50000000000,
             idcible: 2,
             ratio: 3,
@@ -533,8 +533,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Do you like paper bag ?',
-            logo: 'icones/sacpapier.jpg',
+            name: 'Asthma-Proof Airways',
+            logo: 'icones/all_unlock.jpg',
             seuil: 250000000000,
             idcible: 3,
             ratio: 3,
@@ -542,8 +542,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'Multi-Hearted Mogul',
+            logo: 'icones/all_unlock.jpg',
             seuil: 1000000000000,
             idcible: 4,
             ratio: 3,
@@ -551,8 +551,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Do you like paper bag ?',
-            logo: 'icones/sacpapier.jpg',
+            name: 'The Collector’s Edition',
+            logo: 'icones/all_unlock.jpg',
             seuil: 20000000000000,
             idcible: 5,
             ratio: 3,
@@ -560,8 +560,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'Einstein Extraction',
+            logo: 'icones/all_unlock.jpg',
             seuil: 50000000000000,
             idcible: 6,
             ratio: 3,
@@ -569,8 +569,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'This is my bin',
-            logo: 'icones/recyclage.jpg',
+            name: 'Doctor’s Special Combo',
+            logo: 'icones/all_unlock.jpg',
             seuil: 100000000000000,
             idcible: 0,
             ratio: 3,
@@ -580,7 +580,7 @@ export const origworld = {
     ],
     angelupgrades: [
         {
-            name: 'Angel Sacrifice',
+            name: 'Divine Donations',
             logo: 'icones/angel.png',
             seuil: 10000,
             idcible: 0,
@@ -589,7 +589,7 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Angelic Mutiny',
+            name: 'The Holy Extraction',
             logo: 'icones/angel.png',
             seuil: 100000,
             idcible: -1,
@@ -598,7 +598,7 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Angelic Mutiny',
+            name: 'Saintly Supply Chain',
             logo: 'icones/angel.png',
             seuil: 100000000,
             idcible: -1,
@@ -607,7 +607,7 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Angelic Mutiny',
+            name: 'Seraphic Scalpel',
             logo: 'icones/angel.png',
             seuil: 1000000000,
             idcible: 0,
@@ -618,8 +618,8 @@ export const origworld = {
     ],
     managers: [
         {
-            name: 'Wangari Maathai',
-            logo: 'icones/WangariMaathai.jpg',
+            name: 'Dr. Slice McGreedy',
+            logo: 'icones/managers/manager_1.jpg',
             seuil: 1000,
             idcible: 1,
             ratio: 0,
@@ -627,8 +627,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Ellen MacArthur',
-            logo: 'icones/ellenmacarthur.jpg',
+            name: 'Dr. Bypass Betty',
+            logo: 'icones/managers/manager_2.jpg',
             seuil: 15000,
             idcible: 2,
             ratio: 0,
@@ -636,8 +636,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Wangari Maathai',
-            logo: 'icones/WangariMaathai.jpg',
+            name: 'Dr. FrankenFunds',
+            logo: 'icones/managers/manager_3.jpg',
             seuil: 100000,
             idcible: 3,
             ratio: 0,
@@ -645,8 +645,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Ellen MacArthur',
-            logo: 'icones/ellenmacarthur.jpg',
+            name: 'Dr. Igor Patchwork',
+            logo: 'icones/managers/manager_4.jpg',
             seuil: 500000,
             idcible: 4,
             ratio: 0,
@@ -654,8 +654,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Wangari Maathai',
-            logo: 'icones/WangariMaathai.jpg',
+            name: 'Chainsaw Charlie',
+            logo: 'icones/managers/manager_5.jpg',
             seuil: 1200000,
             idcible: 5,
             ratio: 0,
@@ -663,8 +663,8 @@ export const origworld = {
             unlocked: false
         },
         {
-            name: 'Ellen MacArthur',
-            logo: 'icones/ellenmacarthur.jpg',
+            name: 'The Midnight Butcher',
+            logo: 'icones/managers/manger_5.jpg',
             seuil: 10000000,
             idcible: 6,
             ratio: 0,
