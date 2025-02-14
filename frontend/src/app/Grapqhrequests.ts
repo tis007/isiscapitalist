@@ -9,7 +9,7 @@ const GET_WORLD = gql`
       score
       totalangels
       lastupdate
-      products {
+      products{
         id
         name
         logo
@@ -20,7 +20,7 @@ const GET_WORLD = gql`
         quantite
         timeleft
         managerUnlocked
-        paliers {
+        paliers{
           name
           logo
           seuil
@@ -30,7 +30,7 @@ const GET_WORLD = gql`
           unlocked
         }
       }
-      allunlocks {
+      allunlocks{
         name
         logo
         seuil
@@ -39,7 +39,7 @@ const GET_WORLD = gql`
         typeratio
         unlocked
       }
-      upgrades {
+      upgrades{
         name
         logo
         seuil
@@ -48,7 +48,7 @@ const GET_WORLD = gql`
         typeratio
         unlocked
       }
-      angelupgrades {
+      angelupgrades{
         name
         logo
         seuil
@@ -57,7 +57,7 @@ const GET_WORLD = gql`
         typeratio
         unlocked
       }
-      managers {
+      managers{
         name
         logo
         seuil
