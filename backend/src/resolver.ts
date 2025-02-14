@@ -11,6 +11,7 @@ export class GraphQlResolver {
     @Query()
     async getWorld(@Args('user') user: string) {
         let world = this.service.readUserWorld(user);
+        this.service.updateWorld(world)
         this.service.saveWorld(user, world);
 
         return world;
