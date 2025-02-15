@@ -1,0 +1,114 @@
+<div class="mainPageW1">
+  <div class="sidebar">
+    <nav class="sidebar">
+      <header>
+        <a>
+          <div class="image-text">
+            <span class="navbarImage">
+              <img [attr.src]="server+world.logo"  alt="img"/>
+            </span>
+          </div>
+        </a>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#unlocksModal">
+                Unlocks
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#upgradesModal">
+                <span>Upgrades</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#managersModal" >
+                <span>Managers</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#investorsModal">
+                <span>Investors</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modals-->
+
+  <div class="modal fade" id="unlocksModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Unlocks</h5>
+          <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">✖</button>
+        </div>
+        <div class="modal-body">
+          <app-unlocks-w1></app-unlocks-w1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="upgradesModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Upgrades</h5>
+          <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">✖</button>
+        </div>
+        <div class="modal-body">
+          <app-upgrades-w1></app-upgrades-w1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="managersModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Managers</h5>
+          <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">✖</button>
+        </div>
+        <div class="modal-body">
+          <app-managers-w1></app-managers-w1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="investorsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Investors</h5>
+          <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">✖</button>
+        </div>
+        <div class="modal-body">
+          <app-investors-w1></app-investors-w1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

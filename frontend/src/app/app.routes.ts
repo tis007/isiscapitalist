@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {MainPageWorld1Component} from './World_1/main-page-world1/main-page-world1.component';
+import {MainPageWorld1Component} from './World/main-page-world/main-page-world1.component';
 import {StartPageComponent} from './StartingPage/start-page/start-page.component';
 
 
