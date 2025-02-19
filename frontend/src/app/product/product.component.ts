@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Product} from '../schema';
+import {WebserviceService} from '../webservice.service';
 
 @Component({
   selector: 'app-product',
@@ -8,8 +9,13 @@ import {Product} from '../schema';
   standalone: true,
   styleUrl: './product.component.css'
 })
+
 export class ProductComponent {
-  product: Product | undefined;
+  product: Product = new Product();
+  protected server : string
+  constructor(private service: WebserviceService) {
+    this.server= service.server;
+  }
   @Input()
   set prod(value: Product) {
     this.product = value;

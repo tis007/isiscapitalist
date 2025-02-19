@@ -1,1 +1,20 @@
-<p>product works!</p>
+<div class="col-6">
+      <div class="product_details">
+        <div class="product_img">
+          <img [src]="server+product.logo" alt="logo">
+          <div class="qte">
+            {{product.quantite}}
+          </div>
+        </div>
+        <div class="product_content">
+          <div class="product_gain">
+            {{product.revenu}}
+          </div>
+          <div class="product_price">
+            <span> Buy </span>
+            {{product.cout}}
+
+          </div>
+        </div>
+  </div>
+</div>
