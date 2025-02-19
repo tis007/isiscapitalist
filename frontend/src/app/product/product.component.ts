@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product, World} from '../schema';
+import {WebserviceService} from '../webservice.service';
 
 @Component({
   selector: 'app-product',
@@ -14,9 +15,19 @@ export class ProductComponent implements OnInit {
   _money = 0;
   _product = new Product;
   _world = new World;
+  protected server: string;
 
   ngOnInit() {
     setInterval(() => { this.calcScore(); }, 100);
+  }
+
+  constructor(private service: WebserviceService) {
+    this.server = service.server
+  }
+  product: Product =new Product();
+  @Input()
+  set prod(value: Product) {
+    this.product = value;
   }
 
 
