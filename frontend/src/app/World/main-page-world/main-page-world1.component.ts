@@ -5,6 +5,7 @@ import {ManagersW1Component} from '../managers/managers-w1.component';
 import {InvestorsW1Component} from '../investors/investors-w1.component';
 import {World} from '../../schema';
 import {WebserviceService} from '../../webservice.service';
+import {ProductComponent} from '../../product/product.component';
 
 @Component({
   selector: 'app-main-page-world1',
@@ -12,7 +13,8 @@ import {WebserviceService} from '../../webservice.service';
     UnlocksW1Component,
     UpgradesW1Component,
     ManagersW1Component,
-    InvestorsW1Component
+    InvestorsW1Component,
+    ProductComponent
   ],
   templateUrl: './main-page-world1.component.html',
   standalone: true,

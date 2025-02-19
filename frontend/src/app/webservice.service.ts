@@ -6,11 +6,11 @@ import GET_WORLD from './Grapqhrequests';
   providedIn: 'root'
 })
 export class WebserviceService {
-  server = 'http://localhost:3000/graphql';
+  server = 'http://localhost:3000/';
   user = 'Toto';
 
   createClient() {
-    return new Client({ url:this.server,
+    return new Client({ url:this.server +'graphql',
       exchanges: [fetchExchange] });
   }
 
