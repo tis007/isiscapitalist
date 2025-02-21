@@ -62,7 +62,7 @@ export class ProductComponent implements OnInit {
   calcScore() {
     const currentTime = Date.now();
 
-    const elapsedTime = (currentTime - this._p  roduct.lastupdate) / 1000; // Convert to seconds
+    const elapsedTime = (currentTime - this._product.lastupdate) / 1000; // Convert to seconds
 
     let moneyMade = 0;
     if (this._product.managerUnlocked) {
