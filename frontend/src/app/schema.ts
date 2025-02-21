@@ -26,6 +26,7 @@ export class Product {
   timeleft: number = 0;
   managerUnlocked: boolean = false;
   paliers: Palier[] = [];
+  lastupdate: number = Date.now();
 }
 
 export class World {
