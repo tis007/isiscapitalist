@@ -18,17 +18,19 @@
   border-radius: 45px;
   width: 110px;
   height: 90px;
+
   img {
     width: 85px;
     height: 85px;
     border-radius: 45px;
     align-self: center;
+    cursor: pointer;
   }
 }
 .qte{
   margin-top: -5px;
   background-color: #559593;
-  width: 50px;
+  width: 100px;
   height: 25px;
   align-items: center;
   border-radius: 40px;
@@ -38,13 +40,16 @@
 }
 .product_price{
   background-color: #9ABFBE;
-  margin-top: 6px;
-  width:335px ;
-  height:35px ;
   border-radius: 16px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  width:335px ;
+  height:35px ;
+  border: solid transparent;
+}
+.product_price:hover {
+  background-color: #4E7372;
 }
 .product_gain{
   background-color: #9ABFBE;
@@ -52,4 +57,24 @@
   border-radius: 16px;
   align-items: center;
   display: grid;
+  border: solid transparent;
 }
+
+.time{
+  background-color: #559593;
+  width: 100px;
+  height: 35px;
+  align-items: center;
+  display: grid;
+  border-radius: 16px;
+  margin-left: 4px;
+
+}
+
+.product_price_content{
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
