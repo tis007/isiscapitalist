@@ -78,3 +78,7 @@ color: #E1D76E;
 .main_content{
   display: grid;
 }
+.player_money{
+  font-size: 50px;
+  color: white;
+}
