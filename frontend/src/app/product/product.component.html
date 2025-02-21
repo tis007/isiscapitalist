@@ -1,21 +1,22 @@
 <div class="col-6">
-      <div class="product_details">
+      <div class="product_details" *ngIf="product?.quantite !==0">
         <div class="product_img">
-          <img [src]="server+product.logo" alt="logo" (click)="buyProduct()">
+          <img [src]="server+product?.logo" alt="logo" (click)="buyProduct()">
           <div class="qte">
-            {{product.quantite}}
+            {{product?.quantite}}
           </div>
         </div>
         <div class="product_content">
-          <div class="product_gain"> {{product.revenu}}
+          <div class="product_gain"> {{product?.revenu}}
           </div>
           <div class="product_price_content">
 
-            <button class="product_price"><span> Buy </span>{{product.cout}}</button>
+            <button class="product_price"><span> Buy </span>{{product?.cout}}</button>
         <div class="time">
-  {{product.timeleft}}
+        {{product?.timeleft}}
         </div>
           </div>
         </div>
   </div>
+
 </div>
