@@ -1,0 +1,84 @@
+.page_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-family: Orbitron;
+  align-items: center;
+  background-color: white;
+  width: 326px;
+  height: 60px;
+  border-radius: 45px;
+  align-content: center;
+  text-align: center;
+  margin-left: 370px;
+  box-shadow: 6px 6px 15px #9ABFBE;
+}
+.close-btn {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+.description{
+  padding: 10px;
+  text-align: center;
+  font-family: EXO2;
+  font-size: 20px;
+  em{
+    font-weight: bold;
+  }
+}
+.managers_list{
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+}
+.managers_details{
+  background-color: #9ABFBE;
+  border-radius: 18px;
+  width: 672px;
+  height: 106px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.manager_image{
+  width: 95px;
+  height: 153px;
+  margin-left: 10px;
+  margin-bottom: 65px;
+}
+.hire_btn{
+  font-family: Orbitron;
+  width: 90px;
+  height: 63px;
+  background-color: #559593;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.hire_btn:hover{
+  background-color: #4E7372;
+}
+.btn{
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+.content{
+  display: grid;
+  justify-items: center;
+}
+.managername{
+  font-family: Luckiest_Guy;
+  font-size: 25px;
+}
+.managercible{
+  font-family: EXO2;
+}

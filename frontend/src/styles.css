@@ -10,3 +10,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('assets/fonts/Orbitron/static/Orbitron-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
