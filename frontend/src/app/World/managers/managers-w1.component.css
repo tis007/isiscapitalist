@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+
 }
 
 .title {
@@ -78,7 +79,14 @@
 .managername{
   font-family: Luckiest_Guy;
   font-size: 25px;
+
 }
 .managercible{
   font-family: EXO2;
+  color: #275453;
+
+}
+.managerseuil{
+  font-family: EXO2;
+  font-weight: bold;
 }

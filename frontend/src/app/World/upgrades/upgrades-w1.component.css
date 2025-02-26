@@ -1,0 +1,143 @@
+.page_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.title {
+  font-family: Orbitron;
+  align-items: center;
+  background-color: white;
+  width: 326px;
+  height: 60px;
+  border-radius: 45px;
+  align-content: center;
+  text-align: center;
+  margin-left: 370px;
+  box-shadow: 6px 6px 15px #9ABFBE;
+}
+.close-btn {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+.description{
+  padding: 10px;
+  text-align: center;
+  font-family: EXO2;
+  font-size: 20px;
+  em{
+    font-weight: bold;
+  }
+}
+.upgrades_list{
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+}
+.upgrades_details{
+  background-color: #9ABFBE;
+  border-radius: 18px;
+  width: 672px;
+  height: 106px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.upgrade_image{
+  width: 145px;
+  height: 163px;
+  margin-bottom: 65px;
+}
+.buy_btn{
+  font-family: Orbitron;
+  width: 90px;
+  height: 63px;
+  background-color: #559593;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.buy_btn:hover{
+  background-color: #4E7372;
+}
+.btn{
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+.content{
+  display: grid;
+  justify-items: center;
+}
+.upgradesname{
+  font-family: Luckiest_Guy;
+  font-size: 25px;
+}
+.upgradescible{
+  font-family: EXO2;
+  color: #275453;
+
+}
+.upgradeseuil{
+  font-family: EXO2;
+  font-weight: bold;
+}
+
+.upgrade_category{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.upgrade_btn{
+  font-family: Orbitron;
+  width: 150px;
+  height: 43px;
+  background-color: #74AEAD;
+  border-radius: 10px;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+.upgrade_btn:hover{
+  background-color: #4E7372;
+}
+.cash_up_icon{
+  background-color: #9ABFBE;
+  border-radius: 50%;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  cursor: pointer;
+
+}
+.cash_up_icon.selected{
+  background-color: #275453;
+}
+.angel_up_icon{
+  background-color: #9ABFBE;
+  border-radius: 50%;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+.angel_up_icon.selected{
+  background-color: #275453;
+}
+.upgrade_angel_image{
+  width: 100px;
+  height: 113px;
+  margin-top: 43px;
+  margin-left: 10px;
+}
