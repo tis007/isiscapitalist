@@ -19,13 +19,13 @@
     <p>Look no further! Get your investmentsto these quotas to unlock sweet
       <br>profit bonuses! Its Recursiveriffic!</p>
   </div>
-  <div class="unlocks_list"  *ngFor="let unlock of world.allunlocks">
+  <div class="unlocks_list"  *ngFor="let unlock of world.products">
     <div class="unlocks_details" >
       <div class="unlocks_image">
-        <img class="unlocks_image" [attr.src]="server + unlock.logo"  alt="logo"/>
+        <img class="unlocks_image" [attr.src]=server+unlock.paliers[unlock.id].logo  alt="logo"/>
       </div>
       <div>{{unlock.name}}</div>
-      <div>{{unlock.seuil}}</div>
+      <div></div>
       <div></div>
   </div>
 </div>
