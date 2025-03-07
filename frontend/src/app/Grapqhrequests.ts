@@ -11,6 +11,7 @@ const GET_WORLD = gql`
       score
       totalangels
       lastupdate
+      activeangels
       products{
         id
         name
@@ -120,6 +121,7 @@ const RESET_WORLD = gql`
       money
       score
       totalangels
+      activeangels
       lastupdate
       products {
         id
