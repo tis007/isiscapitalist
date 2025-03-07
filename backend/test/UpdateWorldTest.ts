@@ -29,13 +29,13 @@ function calcQtProductionforElapseTime(product, elapsedTime) {
         productionCount =  1 + Math.floor((elapsedTime - product.timeleft) / product.vitesse);
         const remainingTime = (elapsedTime - product.timeleft) % product.vitesse;
 
-        //world.money += productionCount * product.revenu * product.quantite;
+        //world.money += productionCount * _product.revenu * _product.quantite;
         product.timeleft = product.vitesse - remainingTime;
     } else {
         if (product.timeleft > 0) {
             if (product.timeleft <= elapsedTime) {
-                //world.money += product.revenu * product.quantite;
-                productionCount = 1 //product.quantite
+                //world.money += _product.revenu * _product.quantite;
+                productionCount = 1 //_product.quantite
                 product.timeleft = 0;
             } else {
                 product.timeleft -= elapsedTime;

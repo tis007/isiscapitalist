@@ -1,24 +1,24 @@
 <div class="">
-      <div class="product_details" *ngIf="product?.quantite !=0">
+      <div class="product_details" *ngIf="_product?.quantite !=0">
         <div class="product_img">
-          <img [src]="server+product?.logo" alt="logo" (click)="buyProduct()">
+          <img [src]="server+_product?.logo" alt="logo" (click)="buyProduct()">
           <div class="qte">
-            {{product?.quantite}}
+            {{_product?.quantite}}
           </div>
         </div>
         <div class="product_content">
-          <div class="product_gain"> {{product?.revenu}}
+          <div class="product_gain"> {{_product?.revenu}}
           </div>
           <div class="product_price_content">
 
-            <button class="product_price" (click)="buyProduct()"><span> Buy </span>{{product?.cout}}</button>
+            <button class="product_price" (click)="buyProduct()"><span> Buy </span>{{_product?.cout}}</button>
         <div class="time">
-        {{product?.timeleft}}
+        {{_product?.timeleft}}
         </div>
           </div>
         </div>
   </div>
-<div class="product_to_buy" *ngIf="product?.quantite ==0">
+<div class="product_to_buy" *ngIf="_product?.quantite ==0">
   <button class="btn" (click)="buyProduct()">
   <div class="to_buy_content">
       <div class="to_buy_icone">
@@ -34,9 +34,9 @@
 
       </div>
     <div class="to_buy_details">
-      <span>{{product?.name}}</span>
+      <span>{{_product?.name}}</span>
       <br>
-      <span>{{product?.cout}}</span>
+      <span>{{_product?.cout}}</span>
     </div>
   </div>
   </button>

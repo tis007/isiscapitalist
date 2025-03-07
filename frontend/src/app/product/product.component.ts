@@ -27,10 +27,9 @@ export class ProductComponent implements OnInit {
   constructor(private service: WebserviceService) {
     this.server = service.server
   }
-  product: Product =new Product();
   @Input()
-  set prod(value: Product) {
-    this.product = value;
+  set product(value: Product) {
+    this._product = value;
   }
 
 
@@ -38,14 +37,11 @@ export class ProductComponent implements OnInit {
 
   @Output() notifyProduction = new EventEmitter<{ p: Product; qt: number }>();
 
-  @Input()
-  set produduct(value: Product) {
-    this._product = value;
-  }
 
   @Input()
   set world(value: World) {
     this._world = value;
+    this._money = this._world.money;
   }
 
   @Input()
@@ -86,7 +82,7 @@ export class ProductComponent implements OnInit {
       }
 
       // on prévient le composant parent que ce produit a généré son revenu.
-      this.notifyProduction.emit({ p: this.product, qt: moneyMade });
+      this.notifyProduction.emit({ p: this._product, qt: moneyMade });
     }
 
     if (moneyMade > 0) {
@@ -116,6 +112,8 @@ export class ProductComponent implements OnInit {
       this.onBuy.emit(cost);
       this._product.quantite += quantity;
     }
+     console.log(this._product.quantite + ":" + this._product.cout + ":" + this._money) ;
+
   }
 
   calculateTotalCost(quantite: number): number {

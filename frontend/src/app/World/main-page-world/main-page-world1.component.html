@@ -61,15 +61,15 @@
     <div class="container_center">
     <div class="col-6">
     <div class="row">
-        <app-product [prod]="world.products[0]" class="product"></app-product>
-        <app-product [prod]="world.products[1]" class="product"></app-product>
-        <app-product [prod]="world.products[2]" class="product"></app-product>
+        <app-product [product]="world.products[0]" [world]="this.world"  class="product"></app-product>
+        <app-product [product]="world.products[1]" [world]="this.world" class="product"></app-product>
+        <app-product [product]="world.products[2]" [world]="this.world" class="product"></app-product>
       </div>
       </div>
     <div class="col-6">
-      <app-product [prod]="world.products[3]" class="product"></app-product>
-      <app-product [prod]="world.products[4]" class="product"></app-product>
-      <app-product [prod]="world.products[5]" class="product"></app-product>
+      <app-product [product]="world.products[3]" [world]="this.world" class="product"></app-product>
+      <app-product [product]="world.products[4]" [world]="this.world" class="product"></app-product>
+      <app-product [product]="world.products[5]" [world]="this.world" class="product"></app-product>
     </div>
     </div>
   </div>
