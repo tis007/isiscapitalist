@@ -15,21 +15,18 @@ import {NgIf} from '@angular/common';
 export class ProductComponent implements OnInit {
 
   _qtmulti = 'x1';
-  _money = 0;
   _product = new Product;
   _world = new World;
   protected server: string;
 
   ngOnInit() {
-    setInterval(() => { this.calcScore(); }, 100);
+    setInterval(() => {
+      this.calcScore();
+    }, 100);
   }
 
   constructor(private service: WebserviceService) {
     this.server = service.server
-  }
-  @Input()
-  set product(value: Product) {
-    this._product = value;
   }
 
 
@@ -37,11 +34,17 @@ export class ProductComponent implements OnInit {
 
   @Output() notifyProduction = new EventEmitter<{ p: Product; qt: number }>();
 
+  @Input()
+  set product(value: Product) {
+    this._product = value;
+    this._product.lastupdate = Date.now();
+    if (this._world.money && this._product) this.calcMaxCanBuy();
+  }
 
   @Input()
   set world(value: World) {
     this._world = value;
-    this._money = this._world.money;
+    if (this._world.money && this._product) this.calcMaxCanBuy();
   }
 
   @Input()
@@ -50,14 +53,8 @@ export class ProductComponent implements OnInit {
     if (this._qtmulti && this._product) this.calcMaxCanBuy();
   }
 
-  @Input()
-  set money(value: number) {
-    this._money = value;
-    if (this._money && this._product) this.calcMaxCanBuy();
-  }
-
-
   calcScore() {
+
     const currentTime = Date.now();
 
     const elapsedTime = (currentTime - this._product.lastupdate) / 1000; // Convert to seconds
@@ -68,13 +65,15 @@ export class ProductComponent implements OnInit {
       let productionCount = 1 + Math.floor((elapsedTime - this._product.timeleft) / this._product.vitesse);
       const remainingTime = (elapsedTime - this._product.timeleft) % this._product.vitesse;
 
-      moneyMade += productionCount * this._product.revenu * this._product.quantite * (1 + this._world.activeangels *(this._world.angelbonus/100));
+      moneyMade += productionCount * this._product.revenu * this._product.quantite * (1 + this._world.activeangels * (this._world.angelbonus / 100));
 
       this._product.timeleft = this._product.vitesse - remainingTime;
     } else {
       if (this._product.timeleft > 0) {
         if (this._product.timeleft <= elapsedTime) {
-          moneyMade += this._product.revenu * this._product.quantite * (1 + this._world.activeangels *(this._world.angelbonus/100));
+          console.log(this._product.revenu + ":" + this._product.quantite + ":" + this._world.activeangels + ":" + this._world.angelbonus);
+          moneyMade += this._product.revenu * this._product.quantite * (1 + this._world.activeangels * (this._world.angelbonus / 100));
+          console.log('moneyMade', moneyMade);
           this._product.timeleft = 0;
         } else {
           this._product.timeleft -= elapsedTime;
@@ -82,21 +81,21 @@ export class ProductComponent implements OnInit {
       }
 
       // on prévient le composant parent que ce produit a généré son revenu.
-      this.notifyProduction.emit({ p: this._product, qt: moneyMade });
+      this.notifyProduction.emit({p: this._product, qt: moneyMade});
     }
 
     if (moneyMade > 0) {
       this._world.lastupdate = currentTime;
-      this.notifyProduction.emit({ p: this._product, qt: moneyMade });
+      this.notifyProduction.emit({p: this._product, qt: moneyMade});
     }
   }
 
   calcMaxCanBuy(): number {
-    if (!this._product || !this._money) return 0;
+    if (!this._product || !this._world.money) return 0;
 
     const cout = this._product.cout;
     const croissance = this._product.croissance;
-    const money = this._money;
+    const money = this._world.money;
 
     return Math.floor(Math.log((money * (croissance - 1) / cout) + 1) / Math.log(croissance));
   }
@@ -108,11 +107,13 @@ export class ProductComponent implements OnInit {
     else if (this._qtmulti === 'Max') quantity = this.calcMaxCanBuy();
 
     const cost = this.calculateTotalCost(quantity);
-    if (cost <= this._money) {
+    console.log('cost', cost);
+    console.log('money', this._world.money);
+    if (cost <= this._world.money) {
       this.onBuy.emit(cost);
+      this.updateCost(quantity);
       this._product.quantite += quantity;
     }
-     console.log(this._product.quantite + ":" + this._product.cout + ":" + this._money) ;
 
   }
 
@@ -121,8 +122,15 @@ export class ProductComponent implements OnInit {
     const croissance = this._product.croissance;
     return cout * ((1 - Math.pow(croissance, quantite)) / (1 - croissance))
   }
-  startFabrication(){
 
+  updateCost(quantite: number) {
+    this._product.cout *= Math.pow(this._product.croissance, quantite);
+  }
+
+  startFabrication() {
+    if (!this._product.managerUnlocked && this._product.timeleft == 0) {
+      this._product.timeleft = this._product.vitesse;
+    }
   }
 }
 

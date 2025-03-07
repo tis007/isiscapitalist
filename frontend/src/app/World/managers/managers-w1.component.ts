@@ -28,6 +28,7 @@ export class ManagersW1Component {
 
 
   hireManager() {
+    console.log('Hiring manager');
 
   }
 }
