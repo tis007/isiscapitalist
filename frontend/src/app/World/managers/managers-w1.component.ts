@@ -27,4 +27,7 @@ export class ManagersW1Component {
   }
 
 
+  hireManager() {
+
+  }
 }

@@ -60,7 +60,7 @@
       </div>
       <div class="content">
         <div class="upgradesname"> {{ upgrade.name}} </div>
-        <div class="upgradescible"> {{ world.products?.[upgrade.idcible]?.name }} </div>
+        <div class="upgradescible"> {{ world.products?.[upgrade.idcible-1]?.name }} </div>
         <div class="upgradeseuil"> {{upgrade.seuil}} </div>
       </div>
       <div class="buy_btn">
@@ -79,7 +79,7 @@
         </div>
         <div class="content">
           <div class="upgradesname"> {{ upgradeAngel.name}} </div>
-          <div class="upgradescible"> {{ world.products?.[upgradeAngel.idcible]?.name }} </div>
+          <div class="upgradescible"> {{ world.products?.[upgradeAngel.idcible-1]?.name }} </div>
           <div class="upgradeseuil"> {{upgradeAngel.seuil}} </div>
         </div>
         <div class="buy_btn">

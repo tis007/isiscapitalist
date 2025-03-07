@@ -1,0 +1,34 @@
+.page_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.title {
+  font-family: Orbitron;
+  align-items: center;
+  background-color: white;
+  width: 326px;
+  height: 60px;
+  border-radius: 45px;
+  align-content: center;
+  text-align: center;
+  margin-left: 370px;
+  box-shadow: 6px 6px 15px #9ABFBE;
+}
+.close-btn {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+.description{
+  padding: 10px;
+  text-align: center;
+  font-family: EXO2;
+  font-size: 20px;
+  em{
+    font-weight: bold;
+  }
+}
