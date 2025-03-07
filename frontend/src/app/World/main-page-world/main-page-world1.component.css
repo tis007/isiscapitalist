@@ -90,5 +90,7 @@ color: #E1D76E;
   display: flex;
   justify-content: space-evenly;
 }
-
+.product{
+  padding: 15px;
+}
 

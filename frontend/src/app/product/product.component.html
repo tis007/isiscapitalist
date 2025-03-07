@@ -1,5 +1,5 @@
 <div class="">
-      <div class="product_details" *ngIf="product?.quantite !==0">
+      <div class="product_details" *ngIf="product?.quantite !=0">
         <div class="product_img">
           <img [src]="server+product?.logo" alt="logo" (click)="buyProduct()">
           <div class="qte">
@@ -11,7 +11,7 @@
           </div>
           <div class="product_price_content">
 
-            <button class="product_price"><span> Buy </span>{{product?.cout}}</button>
+            <button class="product_price" (click)="buyProduct()"><span> Buy </span>{{product?.cout}}</button>
         <div class="time">
         {{product?.timeleft}}
         </div>
