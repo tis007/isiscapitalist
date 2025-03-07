@@ -61,7 +61,6 @@ export class ProductComponent implements OnInit {
   }
 
 
-
   calcScore() {
     const currentTime = Date.now();
 
@@ -85,6 +84,9 @@ export class ProductComponent implements OnInit {
           this._product.timeleft -= elapsedTime;
         }
       }
+
+      // on prévient le composant parent que ce produit a généré son revenu.
+      this.notifyProduction.emit({ p: this.product, qt: moneyMade });
     }
 
     if (moneyMade > 0) {
