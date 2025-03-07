@@ -1,4 +1,4 @@
-import { RatioType } from './graphql';
+import {RatioType} from './graphql';
 
 export const origworld = {
     name: 'A Nice World 2',
@@ -664,7 +664,7 @@ export const origworld = {
         },
         {
             name: 'The Midnight Butcher',
-            logo: 'icones/managers/manger_5.png',
+            logo: 'icones/managers/manager_6.png',
             seuil: 10000000,
             idcible: 6,
             ratio: 0,
