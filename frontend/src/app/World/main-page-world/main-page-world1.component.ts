@@ -39,4 +39,8 @@ export class MainPageWorld1Component {
     this.world.money += moneyMade;
     this.world.score += moneyMade;
   }
+
+  onBuy($event: number) {
+    this.world.money -= $event;
+  }
 }
