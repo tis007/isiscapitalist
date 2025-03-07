@@ -1,4 +1,4 @@
-<div class="col-6">
+<div class="">
       <div class="product_details" *ngIf="product?.quantite !==0">
         <div class="product_img">
           <img [src]="server+product?.logo" alt="logo" (click)="buyProduct()">
@@ -19,6 +19,7 @@
         </div>
   </div>
 <div class="product_to_buy" *ngIf="product?.quantite ==0">
+  <button class="btn" (click)="buyProduct()">
   <div class="to_buy_content">
       <div class="to_buy_icone">
         <svg width="100" height="100" viewBox="0 0 119 119" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -38,6 +39,7 @@
       <span>{{product?.cout}}</span>
     </div>
   </div>
+  </button>
 
 </div>
 </div>

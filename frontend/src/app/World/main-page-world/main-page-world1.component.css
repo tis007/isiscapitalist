@@ -86,4 +86,9 @@ color: #E1D76E;
 .modal-content{
   background-color: #D9D9D9;
 }
+.container_center{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
