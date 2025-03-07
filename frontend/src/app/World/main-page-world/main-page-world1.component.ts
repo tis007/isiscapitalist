@@ -34,4 +34,9 @@ export class MainPageWorld1Component {
   }
 
 
+  onProductionDone($event: { p: Product; qt: number }) {
+    let moneyMade = $event.qt
+    this.world.money += moneyMade;
+    this.world.score += moneyMade;
+  }
 }
