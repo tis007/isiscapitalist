@@ -31,3 +31,64 @@
     font-weight: bold;
   }
 }
+.investors_content{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: EXO2;
+  font-weight: bold;
+}
+.Investors_count{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 18px;
+  width: 260px;
+  height: 120px;
+  border: solid #9ABFBE;
+}
+.investor_action{
+  display: flex;
+  padding: 10px;
+}
+.Investors_bonus{
+  margin: 10px;
+  background-color: #9ABFBE;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 18px;
+  width: 260px;
+  height: 120px;
+}
+.Investors_active{
+  margin: 10px;
+  background-color: #9ABFBE;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 18px;
+  width: 260px;
+  height: 120px;
+}
+.claim_btn{
+  font-family: Orbitron;
+  width: 200px;
+  height: 63px;
+  background-color: #9faead;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.claim_btn:hover{
+  background-color: #4E7372;
+}
+.btn{
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}

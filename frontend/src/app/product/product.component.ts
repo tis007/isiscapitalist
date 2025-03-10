@@ -1,13 +1,14 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
-import {NgIf} from '@angular/common';
+import {DecimalPipe, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-product',
-  imports: [
-    NgIf
-  ],
+    imports: [
+        NgIf,
+        DecimalPipe
+    ],
   templateUrl: './product.component.html',
   standalone: true,
   styleUrl: './product.component.css'

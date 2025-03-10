@@ -6,6 +6,7 @@ import {InvestorsW1Component} from '../investors/investors-w1.component';
 import {Product, World} from '../../schema';
 import {WebserviceService} from '../../webservice.service';
 import {ProductComponent} from '../../product/product.component';
+import {DecimalPipe} from '@angular/common';
 
 @Component({
   selector: 'app-main-page-world1',
@@ -14,7 +15,8 @@ import {ProductComponent} from '../../product/product.component';
     UpgradesW1Component,
     ManagersW1Component,
     InvestorsW1Component,
-    ProductComponent
+    ProductComponent,
+    DecimalPipe
   ],
   templateUrl: './main-page-world1.component.html',
   standalone: true,

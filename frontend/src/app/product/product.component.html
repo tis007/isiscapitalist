@@ -10,10 +10,9 @@
           <div class="product_gain"> {{_product?.revenu}}
           </div>
           <div class="product_price_content">
-
-            <button class="product_price" (click)="buyProduct()"><span> Buy </span>{{_product?.cout}}</button>
+            <button class="product_price" (click)="buyProduct()"><span> Buy </span>{{_product?.cout | number:'1.2-2'}}</button>
         <div class="time">
-        {{_product?.timeleft}}
+        {{_product?.timeleft | number:'1.2-2'}}
         </div>
           </div>
         </div>

@@ -56,12 +56,12 @@
   <div class="upgrades_list" *ngFor="let upgrade of world.upgrades"  >
     <div class="upgrades_details"  >
       <div class="upgrade_image">
-        <img class="upgrade_image" [attr.src]="server + upgrade.logo"  alt="logo"/>
+        <img class="upgrade_image" [attr.src]="server + upgrade?.logo"  alt="logo"/>
       </div>
       <div class="content">
-        <div class="upgradesname"> {{ upgrade.name}} </div>
+        <div class="upgradesname"> {{ upgrade?.name}} </div>
         <div class="upgradescible"> {{ world.products?.[upgrade.idcible-1]?.name }} </div>
-        <div class="upgradeseuil"> {{upgrade.seuil}} </div>
+        <div class="upgradeseuil"> {{upgrade?.seuil}} </div>
       </div>
       <div class="buy_btn">
         <button type="button" class="btn">Buy !</button>
@@ -75,12 +75,12 @@
     <div class="upgrades_list" *ngFor="let upgradeAngel of world.angelupgrades"  >
       <div class="upgrades_details"  >
         <div class="upgrade_image">
-          <img class="upgrade_angel_image" [attr.src]="server + upgradeAngel.logo"  alt="logo"/>
+          <img class="upgrade_angel_image" [attr.src]="server + upgradeAngel?.logo"  alt="logo"/>
         </div>
         <div class="content">
-          <div class="upgradesname"> {{ upgradeAngel.name}} </div>
+          <div class="upgradesname"> {{ upgradeAngel?.name}} </div>
           <div class="upgradescible"> {{ world.products?.[upgradeAngel.idcible-1]?.name }} </div>
-          <div class="upgradeseuil"> {{upgradeAngel.seuil}} </div>
+          <div class="upgradeseuil"> {{upgradeAngel?.seuil}} </div>
         </div>
         <div class="buy_btn">
           <button type="button" class="btn">Buy !</button>
