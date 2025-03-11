@@ -63,6 +63,7 @@
   text-align: center;
   margin-right: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 .hire_btn:hover{
   background-color: #4E7372;
@@ -70,7 +71,7 @@
 .btn{
   all: unset;
   display: inline-block;
-  cursor: pointer;
+
 }
 .content{
   display: grid;
