@@ -2,13 +2,17 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
 import {DecimalPipe, NgIf} from '@angular/common';
+import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
+import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
 
 @Component({
   selector: 'app-product',
-    imports: [
-        NgIf,
-        DecimalPipe
-    ],
+  imports: [
+    NgIf,
+    DecimalPipe,
+    TimeFormatPipe,
+    NumberSuffixPipe
+  ],
   templateUrl: './product.component.html',
   standalone: true,
   styleUrl: './product.component.css'

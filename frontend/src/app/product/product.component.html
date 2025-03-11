@@ -10,10 +10,8 @@
           <div class="product_gain"> {{_product?.revenu}}
           </div>
           <div class="product_price_content">
-            <button class="product_price" (click)="buyProduct()"><span> Buy </span>{{_product?.cout | number:'1.2-2'}}</button>
-        <div class="time">
-        {{_product?.timeleft | number:'1.2-2'}}
-        </div>
+            <button class="product_price" (click)="buyProduct()"><span> Buy </span><span [innerHTML]="_product.cout | numberSuffix"></span></button>
+        <div class="time">{{ _product?.timeleft | timeFormat }}</div>
           </div>
         </div>
   </div>
@@ -35,7 +33,7 @@
     <div class="to_buy_details">
       <span>{{_product?.name}}</span>
       <br>
-      <span>{{_product?.cout}}</span>
+      <span>${{_product.cout}}</span>
     </div>
   </div>
   </button>

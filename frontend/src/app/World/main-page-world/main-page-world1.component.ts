@@ -7,6 +7,7 @@ import {Product, World} from '../../schema';
 import {WebserviceService} from '../../webservice.service';
 import {ProductComponent} from '../../product/product.component';
 import {DecimalPipe} from '@angular/common';
+import {NumberSuffixPipe} from '../../../Pipes/number-suffix.pipe';
 
 @Component({
   selector: 'app-main-page-world1',
@@ -16,7 +17,8 @@ import {DecimalPipe} from '@angular/common';
     ManagersW1Component,
     InvestorsW1Component,
     ProductComponent,
-    DecimalPipe
+    DecimalPipe,
+    NumberSuffixPipe
   ],
   templateUrl: './main-page-world1.component.html',
   standalone: true,
