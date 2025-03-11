@@ -245,7 +245,7 @@ export class AppService {
 
     updateWorld(world: World): void {
         const currentTime = Date.now();
-        const elapsedTime = (currentTime - world.lastupdate) / 1000; // Convert to seconds
+        const elapsedTime = (currentTime - world.lastupdate); // Convert to seconds
 
         let moneyMade = 0;
         world.products.forEach(product => {
