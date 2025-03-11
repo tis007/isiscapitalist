@@ -132,7 +132,9 @@ export class ProductComponent implements OnInit {
 
   startFabrication() {
     if (this._product.timeleft == 0) {
-      this._product.timeleft = this._product.vitesse;
+      this.service.lancerProduction(this._world.name, this._product).then(r => {
+        this._product.timeleft = this._product.vitesse;
+      });
     }
   }
 }

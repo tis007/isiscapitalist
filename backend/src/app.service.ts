@@ -7,7 +7,7 @@ import {AppController} from "./app.controller";
 
 @Injectable()
 export class AppService {
-    private readonly logger = new Logger(AppController.name);
+
 
     readUserWorld(user: string): World {
         try {
@@ -17,7 +17,9 @@ export class AppService {
             return JSON.parse(data.toString());
         } catch (e: unknown) {
             console.log((e as Error).message);
-            return <World>origworld;
+            const world = <World>origworld;
+            world.name = user;
+            return world;
         }
     }
 
