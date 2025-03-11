@@ -26,8 +26,8 @@ function calcQtProductionforElapseTime(product, elapsedTime) {
 
     let productionCount = 0;
     if (product.managerUnlocked) {
-        productionCount =  1 + Math.floor((elapsedTime - product.timeleft) / product.vitesse);
-        const remainingTime = (elapsedTime - product.timeleft) % product.vitesse;
+        productionCount =  Math.floor((elapsedTime + product.vitesse - product.timeleft) / product.vitesse);
+        const remainingTime = (elapsedTime + product.vitesse - product.timeleft) % product.vitesse;
 
         //world.money += productionCount * _product.revenu * _product.quantite;
         product.timeleft = product.vitesse - remainingTime;
