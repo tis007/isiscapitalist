@@ -1,29 +1,52 @@
+.startPage {
+  background-image: url("/assets/startPage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .startPageContent {
+  align-self: center;
+  height: 399px;
+  width: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
+  background-color: rgba(219, 227, 227, 0.36);
+  border-radius: 16px;
 }
 .game_name{
   font-family: "Luckiest_Guy";
-  font-size: 56px;
+  font-size: 70px;
+  margin-top: 55px
 }
 .credentials{
   width: 330px;
-  padding-top: 10px;
+  padding-top: 63px;
   input{
     font-family: "Lucida Sans";
     font-size: 14px;
-    background-color: #DBE3E3;
+    background-color: rgba(154, 191, 190);
     text-align: center;
+    border-color:#9ABFBE ;
   }
 }
 .startbtn{
-  padding-top: 25px;
+  padding-top: 20px;
 }
 button{
   font-family: Luckiest_Guy;
   color: black;
   width: 122px;
-  background-color: #67C591;
+  background-color: #3E8E8C;
+  border-color: #3E8E8C;
+}
+
+button:hover{
+  background-color: #2e7371;
 }
