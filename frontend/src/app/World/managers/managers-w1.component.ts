@@ -1,14 +1,15 @@
 import {Component, Input} from '@angular/core';
 import {Palier, Product, World} from '../../schema';
 import {WebserviceService} from '../../webservice.service';
-import {NgForOf, NgIf} from '@angular/common';
+import {NgClass, NgForOf, NgIf} from '@angular/common';
 
 
 @Component({
   selector: 'app-managers-w1',
   imports: [
     NgForOf,
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './managers-w1.component.html',
   standalone: true,

@@ -8,9 +8,20 @@
         </div>
         <div class="product_content">
           <div class="product_gain"> {{_product?.revenu}}
+<!--            <app-my-progress-bar [run]="run" [auto]="auto"-->
+<!--                                 frontcolor="#008800"-->
+<!--                                 backcolor="#FFFFFF"-->
+<!--                                 [orientation]="orientation"-->
+<!--                                 [vitesse]="_product.vitesse"-->
+<!--                                 [initialValue]="initialValue">-->
+<!--            </app-my-progress-bar>-->
+
           </div>
           <div class="product_price_content">
-            <button class="product_price" (click)="buyProduct()"><span> Buy </span><span [innerHTML]="_product.cout | numberSuffix"></span></button>
+            <button class="product_price"
+                    (click)="buyProduct()"
+                    [ngClass]="{'affordable': _world.money >= _product.cout}">
+              <span> Buy </span><span [innerHTML]="_product.cout | numberSuffix"></span></button>
         <div class="time">{{ _product?.timeleft | timeFormat }}</div>
           </div>
         </div>

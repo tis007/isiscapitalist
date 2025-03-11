@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NumberSuffixPipe implements PipeTransform {
   transform(value: number): string {
-    if (value < 1_000_000) return Math.round(value).toString(); // En dessous de 1M, afficher normalement
+    if (value < 1_000_000) return value.toFixed(2); // En dessous de 1M, afficher avec 2 décimales
 
     const suffixes = ['Million', 'Billion', 'Trillion', 'Quadrillion', 'Quintillion'];
     let suffixIndex = 0;
@@ -17,6 +17,6 @@ export class NumberSuffixPipe implements PipeTransform {
       suffixIndex++;
     }
 
-    return `<span style="font-size: 1.2em;">${Math.round(num)}</span> <span style="font-size: 0.6em;">${suffixes[suffixIndex]}</span>`;
+    return `<span style="font-size: 1.2em;">${num.toFixed(2)}</span> <span style="font-size: 0.6em;">${suffixes[suffixIndex]}</span>`;
   }
 }

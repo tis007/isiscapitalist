@@ -1,9 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
-import {DecimalPipe, NgIf} from '@angular/common';
+import {DecimalPipe, NgClass, NgIf} from '@angular/common';
 import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
 import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
+import {MyProgressBarComponent} from './progressbar.component';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +12,8 @@ import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
     NgIf,
     DecimalPipe,
     TimeFormatPipe,
-    NumberSuffixPipe
+    NumberSuffixPipe,
+    NgClass,
   ],
   templateUrl: './product.component.html',
   standalone: true,
@@ -137,5 +139,6 @@ export class ProductComponent implements OnInit {
       this._product.timeleft = this._product.vitesse;
     }
   }
+
 }
 

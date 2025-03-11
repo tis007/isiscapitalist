@@ -31,7 +31,10 @@
      <div class="managerseuil"> {{ manager.seuil}} </div>
    </div>
    <div class="hire_btn">
-     <button type="button" class="btn" (click)="hireManager()">Hire !</button>
+     <button type="button"
+             class="btn"
+             [ngClass]="{'affordable': world.money >= manager.seuil}"
+             (click)="hireManager()">Hire !</button>
    </div>
  </div>
   </div>

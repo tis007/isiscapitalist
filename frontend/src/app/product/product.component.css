@@ -52,8 +52,14 @@
   height:35px ;
   border: solid transparent;
 }
-.product_price:hover {
+.product_price.affordable:hover {
   background-color: #4E7372;
+}
+
+.product_price.affordable {
+  background-color: #8a9797;
+  box-shadow: 0 0 10px #20e3dc;
+
 }
 .product_gain{
   background-color: #9ABFBE;
