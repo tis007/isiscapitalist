@@ -9,8 +9,8 @@ export class NumberSuffixPipe implements PipeTransform {
     if (value < 1_000_000) return Math.round(value).toString(); // En dessous de 1M, afficher normalement
 
     const suffixes = ['Million', 'Billion', 'Trillion', 'Quadrillion', 'Quintillion'];
-    let suffixIndex = 0; // Commencer à 0 pour "Million"
-    let num = value / 1_000_000; // On commence directement à Million
+    let suffixIndex = 0;
+    let num = value / 1_000_000;
 
     while (num >= 1000 && suffixIndex < suffixes.length - 1) {
       num /= 1000;
