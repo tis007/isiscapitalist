@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
-import {NgClass, NgIf} from '@angular/common';
+import {NgIf} from '@angular/common';
 import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
 import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
 
@@ -10,8 +10,7 @@ import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
   imports: [
     NgIf,
     TimeFormatPipe,
-    NumberSuffixPipe,
-    NgClass
+    NumberSuffixPipe
   ],
   templateUrl: './product.component.html',
   standalone: true,
