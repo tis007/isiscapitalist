@@ -21,15 +21,28 @@ export class ManagersW1Component {
   }
   world: World =new World();
 
+  _manager: Palier = new Palier;
+
   server: string;
   @Input()
   set wor(value: World) {
     this.world = value;
   }
 
+  @Input()
+  set manager(value: Palier) {
+    this._manager = value;
+  }
+
 
   hireManager() {
     console.log('Hiring manager');
+
+    if (this.world.money >= this._manager.seuil) {
+      this.world.money -= this._manager.seuil;
+      this._manager.unlocked = true;
+      this.world.products[this._manager.idcible].managerUnlocked = true;
+    }
 
   }
 }

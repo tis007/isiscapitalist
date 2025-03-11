@@ -1,19 +1,16 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
-import {DecimalPipe, NgClass, NgIf} from '@angular/common';
+import {NgIf} from '@angular/common';
 import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
 import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
-import {MyProgressBarComponent} from './progressbar.component';
 
 @Component({
   selector: 'app-product',
   imports: [
     NgIf,
-    DecimalPipe,
     TimeFormatPipe,
-    NumberSuffixPipe,
-    NgClass,
+    NumberSuffixPipe
   ],
   templateUrl: './product.component.html',
   standalone: true,
@@ -64,16 +61,17 @@ export class ProductComponent implements OnInit {
 
     const currentTime = Date.now();
 
-    const elapsedTime = (currentTime - this._product.lastupdate) / 1000; // Convert to seconds
+    const elapsedTime = (currentTime - this._product.lastupdate);
 
     let moneyMade = 0;
     if (this._product.managerUnlocked) {
-      moneyMade = Math.floor(elapsedTime / this._product.vitesse);
+      //moneyMade = Math.floor(elapsedTime / this._product.vitesse);
       let productionCount = 1 + Math.floor((elapsedTime - this._product.timeleft) / this._product.vitesse);
       const remainingTime = (elapsedTime - this._product.timeleft) % this._product.vitesse;
 
       moneyMade += productionCount * this._product.revenu * this._product.quantite * (1 + this._world.activeangels * (this._world.angelbonus / 100));
 
+      console.log(this._product.vitesse)
       this._product.timeleft = this._product.vitesse - remainingTime;
     } else {
       if (this._product.timeleft > 0) {
@@ -91,8 +89,9 @@ export class ProductComponent implements OnInit {
       this.notifyProduction.emit({p: this._product, qt: moneyMade});
     }
 
+
+    this._product.lastupdate = currentTime;
     if (moneyMade > 0) {
-      this._world.lastupdate = currentTime;
       this.notifyProduction.emit({p: this._product, qt: moneyMade});
     }
   }
@@ -139,6 +138,5 @@ export class ProductComponent implements OnInit {
       this._product.timeleft = this._product.vitesse;
     }
   }
-
 }
 
