@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Palier, Product, World} from '../../schema';
 import {WebserviceService} from '../../webservice.service';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
-
+import {addWarning} from '@angular-devkit/build-angular/src/utils/webpack-diagnostics';
 
 @Component({
   selector: 'app-managers-w1',

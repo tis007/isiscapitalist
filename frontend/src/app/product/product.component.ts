@@ -111,9 +111,11 @@ export class ProductComponent implements OnInit {
     console.log('cost', cost);
     console.log('money', this._world.money);
     if (cost <= this._world.money) {
-      this.onBuy.emit(cost);
-      this.updateCost(quantity);
-      this._product.quantite += quantity;
+      this.service.acheterQtProduit(this._world.name, this._product, quantity).then(r => {
+        this.onBuy.emit(cost);
+        this.updateCost(quantity);
+        this._product.quantite += quantity;});
+
     }
 
   }
