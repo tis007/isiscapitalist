@@ -28,10 +28,9 @@ export class UpgradesW1Component {
   }
 
   buyUpgrade(upgrade: Palier) {
-    console.log('Buying upgrade');
     if (upgrade.seuil <= this.world.money) {
       this.service.acheterCashUpgrade(this.world.name, upgrade.idcible).then((response) => {
-        this.service.applyBonusForProduct(this.world, this.world.products[upgrade.idcible], upgrade);
+        this.service.applyBonus(this.world, upgrade);
         this.world.money -= upgrade.seuil;
         upgrade.unlocked = true;
       })

@@ -81,6 +81,27 @@ export class WebserviceService {
     }
   }
 
+
+  applyBonus(world: World, palier: Palier) {
+    if (palier.idcible > 0) {
+      let product = world.products.find((p) => p.id === palier.idcible);
+      if (!product) {
+        throw new Error(`Le produit avec l'id ${palier.idcible} n'existe pas`);
+      }
+      this.applyBonusForProduct(world, product, palier);
+    }
+
+    if (palier.idcible === 0) {
+      world.products.forEach(product => {
+        this.applyBonusForProduct(world, product, palier);
+      });
+    }
+
+    if (palier.idcible === -1) {
+      world.angelbonus += palier.ratio;
+    }
+  }
+
   constructor() {
   }
 }
