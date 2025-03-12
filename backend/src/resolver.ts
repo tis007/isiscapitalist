@@ -39,9 +39,9 @@ export class GraphQlResolver {
     @Mutation()
     async engagerManager(
         @Args('user') user: string,
-        @Args('id') id: number,
+        @Args('name') name: string,
     ) {
-        return this.service.engagerManager(user, id);
+        return this.service.engagerManager(user, name);
     }
 
     @Mutation()

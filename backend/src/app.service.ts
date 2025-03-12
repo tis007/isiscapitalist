@@ -81,23 +81,24 @@ export class AppService {
         return product;
     }
 
-    engagerManager(user: string, id: number) {
+    engagerManager(user: string, name: string) {
         let world = this.readUserWorld(user);
         this.updateWorld(world);
 
-        let manager = world.managers.find((m) => m.idcible === id);
+        let manager = world.managers.find((m) => m.name === name);
         if (!manager) {
-            throw new Error(`Le manager du produit avec l'id ${id} n'existe pas`);
+            throw new Error(`Le manager du produit avec l'id ${name} n'existe pas`);
         }
         if (world.money < manager.seuil) {
-            throw new Error(`Pas assez d'argent pour engager le manager du produit avec l'id ${id}`);
+            throw new Error(`Pas assez d'argent pour engager le manager du produit avec l'id ${name}`);
         }
         if (manager.unlocked) {
-            throw new Error(`Le manager du produit avec l'id ${id} est déjà engagé`);
+            throw new Error(`Le manager du produit avec l'id ${name} est déjà engagé`);
         }
 
         world.money -= manager.seuil;
         manager.unlocked = true;
+        world.products.find((p) => p.id === manager.idcible).managerUnlocked = true;
 
         this.saveWorld(user, world);
 

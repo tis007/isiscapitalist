@@ -31,10 +31,10 @@ export class WebserviceService {
     }).toPromise();
   }
 
-  async engagerManager(user: string, product: Product) {
+  async engagerManager(user: string, manager: Palier) {
     return await this.createClient().mutation(ENGAGER_MANAGER, {
       user: user,
-      name: product.name
+      name: manager.name
     }).toPromise();
   }
 

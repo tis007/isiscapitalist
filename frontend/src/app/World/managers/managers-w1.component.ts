@@ -1,14 +1,12 @@
 import {Component, Input} from '@angular/core';
-import {Palier, Product, World} from '../../schema';
+import {Palier, World} from '../../schema';
 import {WebserviceService} from '../../webservice.service';
-import {NgClass, NgForOf, NgIf} from '@angular/common';
-import {addWarning} from '@angular-devkit/build-angular/src/utils/webpack-diagnostics';
+import {NgClass, NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-managers-w1',
   imports: [
     NgForOf,
-    NgIf,
     NgClass
   ],
   templateUrl: './managers-w1.component.html',
@@ -19,33 +17,30 @@ export class ManagersW1Component {
   constructor(private service: WebserviceService) {
     this.server = service.server
   }
-  world: World =new World();
 
-  _manager: Palier = new Palier;
+  world: World = new World();
+
 
   server: string;
+
   @Input()
   set wor(value: World) {
     this.world = value;
   }
 
-  @Input()
-  set manager(value: Palier) {
-    this._manager = value;
-  }
 
+  hireManager(manager: Palier) {
+    let targetManager = this.world.managers.find((m) => m.name === manager.name);
 
-  hireManager() {
-    console.log('Hiring manager');
+    if (targetManager && this.world.money >= targetManager.seuil) {
+      this.service.engagerManager(this.world.name, targetManager).then((response) => {
+        this.world.money -= targetManager.seuil;
+        targetManager.unlocked = true;
+        this.world.products[targetManager.idcible].managerUnlocked = true;
 
-    if (this.world.money >= this._manager.seuil) {
-      this.service.engagerManager(this.world.name, this.world.products[this._manager.idcible]).then((response) => {
-        this.world.money -= this._manager.seuil;
-        this._manager.unlocked = true;
-        this.world.products[this._manager.idcible].managerUnlocked = true;
-      })
-
+        console.log(targetManager);
+        console.log(this.world.products[targetManager.idcible]);
+      });
     }
-
   }
 }

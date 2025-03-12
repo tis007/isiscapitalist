@@ -73,6 +73,9 @@ export class ProductComponent implements OnInit {
         moneyMade += productionCount * this._product.revenu * this._product.quantite * (1 + this._world.activeangels * (this._world.angelbonus / 100));
 
         this._product.timeleft = this._product.vitesse - remainingTime;
+        if (this._product.timeleft === 0) {
+          this._product.timeleft = this._product.vitesse;
+        }
       } else {
 
         if (this._product.timeleft <= elapsedTime) {
@@ -115,7 +118,6 @@ export class ProductComponent implements OnInit {
         this.updateCost(quantity);
         this._product.quantite += quantity;
         this.checkUnlocks(this._world, this._product);
-        console.log('product', this._product);
       });
     }
 
