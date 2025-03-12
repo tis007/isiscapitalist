@@ -138,7 +138,7 @@ export class AppService {
     }
 
     applyBonus(world: World, palier: Palier) {
-        if (palier.idcible >= 0) {
+        if (palier.idcible > 0) {
             let product = world.products.find((p) => p.id === palier.idcible);
             if (!product) {
                 throw new Error(`Le produit avec l'id ${palier.idcible} n'existe pas`);

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Client, fetchExchange} from '@urql/core';
-import {Product} from './schema';
+import {Palier, Product, World} from './schema';
 import {ACHETER_PRODUIT, ENGAGER_MANAGER, GET_WORLD, LANCER_PRODUCTION, ACHETER_ANGEL_UPGRADE, ACHETER_CASH_UPGRADE, RESET_WORLD} from './Grapqhrequests';
 
 
@@ -27,8 +27,7 @@ export class WebserviceService {
   async lancerProduction(user: string, product: Product) {
     return await this.createClient().mutation(LANCER_PRODUCTION, {
       user: user,
-      id:
-      product.id
+      id: product.id,
     }).toPromise();
   }
 
@@ -66,6 +65,22 @@ export class WebserviceService {
       user
     }).toPromise();
   }
+
+
+  applyBonusForProduct(world: World, product: Product, palier: Palier) {
+    switch (palier.typeratio) {
+      case "gain":
+        product.revenu *= palier.ratio;
+        break;
+      case "vitesse":
+        product.vitesse /= palier.ratio;
+        break;
+      case "ange":
+        world.angelbonus += palier.ratio;
+        break;
+    }
+  }
+
   constructor() {
   }
 }

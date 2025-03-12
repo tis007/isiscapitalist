@@ -64,7 +64,7 @@
         <div class="upgradeseuil"> {{upgrade?.seuil}} </div>
       </div>
       <div class="buy_btn">
-        <button type="button" class="btn">Buy !</button>
+        <button type="button" class="btn" (click)="buyUpgrade(upgrade)">Buy !</button>
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@
           <div class="upgradeseuil"> {{upgradeAngel?.seuil}} </div>
         </div>
         <div class="buy_btn">
-          <button type="button" class="btn">Buy !</button>
+          <button type="button" class="btn" (click)="buyUpgrade(upgradeAngel)">Buy !</button>
         </div>
       </div>
     </div>
