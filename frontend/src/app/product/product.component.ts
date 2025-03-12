@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Product, World} from '../schema';
+import {Palier, Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
 import {NgClass, NgIf} from '@angular/common';
 import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
@@ -108,15 +108,17 @@ export class ProductComponent implements OnInit {
     else if (this._qtmulti === 'Max') quantity = this.calcMaxCanBuy();
 
     const cost = this.calculateTotalCost(quantity);
-    console.log('cost', cost);
-    console.log('money', this._world.money);
+
     if (cost <= this._world.money) {
       this.service.acheterQtProduit(this._world.name, this._product, quantity).then(r => {
         this.onBuy.emit(cost);
         this.updateCost(quantity);
-        this._product.quantite += quantity;});
-
+        this._product.quantite += quantity;
+        this.checkUnlocks(this._world, this._product);
+        console.log('product', this._product);
+      });
     }
+
 
   }
 
@@ -134,6 +136,57 @@ export class ProductComponent implements OnInit {
     if (this._product.timeleft == 0) {
       this.service.lancerProduction(this._world.name, this._product).then(r => {
         this._product.timeleft = this._product.vitesse;
+      });
+    }
+  }
+
+
+
+
+  checkUnlocks(world: World, product: Product) {
+    // specific unlocks
+    this.checkProductUnlocks(world, product);
+
+    // allunlocks
+    this.checkAllUnlocks(world);
+  }
+
+  checkProductUnlocks(world: World, product: Product) {
+    product.paliers.forEach(palier => {
+      if (!palier.unlocked && product.quantite >= palier.seuil) {
+        palier.unlocked = true;
+        this.applyBonus(world, palier);
+      }
+    });
+  }
+
+  checkAllUnlocks(world: World) {
+    let productQuantityTotal = 0;
+    world.products.forEach(product => {
+      productQuantityTotal += product.quantite;
+    })
+
+    world.allunlocks.forEach(palier => {
+      if (!palier.unlocked && productQuantityTotal >= palier.seuil) {
+        palier.unlocked = true;
+        this.applyBonus(world, palier);
+      }
+    });
+
+  }
+
+  applyBonus(world: World, palier: Palier) {
+    if (palier.idcible > 0) {
+      let product = world.products.find((p) => p.id === palier.idcible);
+      if (!product) {
+        throw new Error(`Le produit avec l'id ${palier.idcible} n'existe pas`);
+      }
+      this.service.applyBonusForProduct(world, product, palier);
+    }
+
+    if (palier.idcible === 0) {
+      world.products.forEach(product => {
+        this.service.applyBonusForProduct(world, product, palier);
       });
     }
   }
