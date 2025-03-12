@@ -39,9 +39,12 @@ export class ManagersW1Component {
     console.log('Hiring manager');
 
     if (this.world.money >= this._manager.seuil) {
-      this.world.money -= this._manager.seuil;
-      this._manager.unlocked = true;
-      this.world.products[this._manager.idcible].managerUnlocked = true;
+      this.service.engagerManager(this.world.name, this.world.products[this._manager.idcible]).then((response) => {
+        this.world.money -= this._manager.seuil;
+        this._manager.unlocked = true;
+        this.world.products[this._manager.idcible].managerUnlocked = true;
+      })
+
     }
 
   }
