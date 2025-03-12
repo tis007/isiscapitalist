@@ -252,8 +252,8 @@ export class AppService {
         let moneyMade = 0;
         world.products.forEach(product => {
             if (product.managerUnlocked) {
-                let productionCount = 1 + Math.floor((elapsedTime - product.timeleft) / product.vitesse);
-                const remainingTime = (elapsedTime - product.timeleft) % product.vitesse;
+                let productionCount = Math.floor((elapsedTime + product.vitesse - product.timeleft) / product.vitesse);
+                const remainingTime = (elapsedTime + product.vitesse - product.timeleft) % product.vitesse;
 
                 moneyMade += productionCount * product.revenu * product.quantite * (1 + world.activeangels *(world.angelbonus/100));
 
