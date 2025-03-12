@@ -8,7 +8,7 @@ export class TimeFormatPipe implements PipeTransform {
   transform(value: number | undefined): string {
     if (value === undefined || value < 0) return '00:00:00';
 
-    const totalSeconds = Math.floor(value / 100);
+    const totalSeconds = Math.floor(value / 10);
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
