@@ -47,17 +47,17 @@ export class GraphQlResolver {
     @Mutation()
     async acheterCashUpgrade(
         @Args('user') user: string,
-        @Args('id') id: number,
+        @Args('name') name: string,
     ) {
-        return this.service.acheterCashUpgrade(user, id);
+        return this.service.acheterCashUpgrade(user, name);
     }
 
     @Mutation()
     async acheterAngelUpgrade(
         @Args('user') user: string,
-        @Args('id') id: number,
+        @Args('name') name: string,
     ) {
-        return this.service.acheterAngelUpgrade(user, id);
+        return this.service.acheterAngelUpgrade(user, name);
     }
 
     @Mutation()

@@ -172,13 +172,13 @@ export class AppService {
     }
 
 
-    acheterCashUpgrade(user: string, id: number): Palier {
+    acheterCashUpgrade(user: string, name: string): Palier {
         let world = this.readUserWorld(user);
         this.updateWorld(world);
 
-        let upgrade = world.upgrades.find((u) => u.idcible === id);
+        let upgrade = world.upgrades.find((u) => u.name === name);
         if (!upgrade) {
-            throw new Error(`L'upgrade avec l'id ${id} n'existe pas`);
+            throw new Error(`L'upgrade avec l'id ${name} n'existe pas`);
         }
         if (world.money < upgrade.seuil) {
             throw new Error(`Pas assez d'argent pour acheter l'upgrade ${upgrade.name}`);
@@ -197,13 +197,13 @@ export class AppService {
     }
 
 
-    acheterAngelUpgrade(user: string, id: number): Palier {
+    acheterAngelUpgrade(user: string, name: string): Palier {
         let world = this.readUserWorld(user);
         this.updateWorld(world);
 
-        let upgrade = world.angelupgrades.find((u) => u.idcible === id);
+        let upgrade = world.angelupgrades.find((u) => u.name === name);
         if (!upgrade) {
-            throw new Error(`L'upgrade avec l'id ${id} n'existe pas`);
+            throw new Error(`L'upgrade avec l'id ${name} n'existe pas`);
         }
         if (world.activeangels < upgrade.seuil) {
             throw new Error(`Pas assez d'anges pour acheter l'upgrade ${upgrade.name}`);
@@ -226,17 +226,19 @@ export class AppService {
         this.updateWorld(world);
 
         // Calculate additional angels gained
-        const additionalAngels = Math.floor(150 * Math.sqrt(world.score / Math.pow(10, 5))) - world.totalangels;
+        const additionalAngels = Math.floor(150 * Math.sqrt(world.score / Math.pow(10, 4))) - world.totalangels;
         world.totalangels += additionalAngels;
         world.activeangels += additionalAngels;
 
-        // Store score and angel properties
+        // Store properties
         const score = world.score;
         const totalangels = world.totalangels;
         const activeangels = world.activeangels;
+        const name = world.name;
 
         // Reset world to its initial state
         world = <World>origworld;
+        world.name = name;
         world.score = score;
         world.totalangels = totalangels;
         world.activeangels = activeangels;

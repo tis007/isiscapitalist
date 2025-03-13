@@ -1,7 +1,15 @@
 import {Injectable} from '@angular/core';
 import {Client, fetchExchange} from '@urql/core';
 import {Palier, Product, World} from './schema';
-import {ACHETER_PRODUIT, ENGAGER_MANAGER, GET_WORLD, LANCER_PRODUCTION, ACHETER_ANGEL_UPGRADE, ACHETER_CASH_UPGRADE, RESET_WORLD} from './Grapqhrequests';
+import {
+  ACHETER_ANGEL_UPGRADE,
+  ACHETER_CASH_UPGRADE,
+  ACHETER_PRODUIT,
+  ENGAGER_MANAGER,
+  GET_WORLD,
+  LANCER_PRODUCTION,
+  RESET_WORLD
+} from './Grapqhrequests';
 
 
 @Injectable({
@@ -46,21 +54,22 @@ export class WebserviceService {
     }).toPromise();
   }
 
-  async acheterCashUpgrade(user: string, id: number) {
+  async acheterCashUpgrade(user: string, upgrade: Palier) {
+    console.log(upgrade.name);
     return await this.createClient().mutation(ACHETER_CASH_UPGRADE, {
       user,
-      id
+      name: upgrade.name
     }).toPromise();
   }
 
-  async acheterAngelUpgrade(user: string, id: number) {
+  async acheterAngelUpgrade(user: string, upgrade: Palier) {
     return await this.createClient().mutation(ACHETER_ANGEL_UPGRADE, {
       user,
-      id
+      name: upgrade.name
     }).toPromise();
   }
 
-  async resetWorld(user: string)  {
+  async resetWorld(user: string) {
     return await this.createClient().mutation(RESET_WORLD, {
       user
     }).toPromise();

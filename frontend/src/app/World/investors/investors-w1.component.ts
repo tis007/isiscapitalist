@@ -22,4 +22,14 @@ export class InvestorsW1Component {
   set wor(value: World) {
     this.world = value;
   }
+
+  calcAngelToClaim() {
+    return Math.floor(150 * Math.sqrt(this.world.score / Math.pow(10, 4))) - this.world.totalangels;
+  }
+
+  resetWorld() {
+    this.service.resetWorld(this.service.user).then((response) => {
+      this.world = response.data.worldReset;
+    });
+  }
 }
