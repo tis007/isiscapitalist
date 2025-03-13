@@ -47,4 +47,18 @@ export class MainPageWorld1Component {
   onBuy($event: number) {
     this.world.money -= $event;
   }
+  multiplier: number = 1;
+  multiplierLabel: string = 'BUY x1';
+  onMultiplierChange() {
+    if (this.multiplier === 1) {
+      this.multiplier = 10;
+      this.multiplierLabel = 'BUY x10';
+    } else if (this.multiplier === 10) {
+      this.multiplier = 100;
+      this.multiplierLabel = 'BUY x100';
+    } else {
+      this.multiplier = 1;
+      this.multiplierLabel = 'BUY x1';
+    }
+  }
 }

@@ -21,6 +21,7 @@ import {MyProgressBarComponent, Orientation} from './progressbar.component';
   styleUrl: './product.component.css'
 })
 export class ProductComponent implements OnInit {
+  @Input() multiplier: number = 1;
 
   _qtmulti = 'x1';
   _product = new Product;
@@ -36,7 +37,6 @@ export class ProductComponent implements OnInit {
   constructor(private service: WebserviceService) {
     this.server = service.server
   }
-
 
   @Output() onBuy = new EventEmitter<number>();
 
@@ -87,6 +87,7 @@ export class ProductComponent implements OnInit {
           this._product.timeleft = 0;
         } else {
           this._product.timeleft -= elapsedTime;
+
         }
       }
     }
