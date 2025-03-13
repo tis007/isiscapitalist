@@ -60,7 +60,7 @@ export class WebserviceService {
     }).toPromise();
   }
 
-  async resetWorld(user: string) {
+  async resetWorld(user: string)  {
     return await this.createClient().mutation(RESET_WORLD, {
       user
     }).toPromise();

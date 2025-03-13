@@ -230,7 +230,7 @@ export class AppService {
         world.totalangels += additionalAngels;
         world.activeangels += additionalAngels;
 
-        // Preserve score and angel properties
+        // Store score and angel properties
         const score = world.score;
         const totalangels = world.totalangels;
         const activeangels = world.activeangels;

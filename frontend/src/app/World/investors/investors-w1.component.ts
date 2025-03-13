@@ -13,9 +13,11 @@ export class InvestorsW1Component {
   constructor(private service: WebserviceService) {
     this.server = service.server
   }
-  world: World =new World();
+
+  world: World = new World();
 
   server: string;
+
   @Input()
   set wor(value: World) {
     this.world = value;

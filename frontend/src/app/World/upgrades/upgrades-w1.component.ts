@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {WebserviceService} from '../../webservice.service';
-import {Palier, Product, World} from '../../schema';
+import {Palier, World} from '../../schema';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
 
 @Component({
@@ -18,10 +18,12 @@ export class UpgradesW1Component {
   constructor(private service: WebserviceService) {
     this.server = service.server
   }
-  world: World =new World();
+
+  world: World = new World();
 
   server: string;
-  selectedCategory: string ='cash';
+  selectedCategory: string = 'cash';
+
   @Input()
   set wor(value: World) {
     this.world = value;
@@ -37,6 +39,15 @@ export class UpgradesW1Component {
     }
   }
 
+  buyAngelUpgrade(upgrade: Palier) {
+    if (upgrade.seuil <= this.world.activeangels) {
+      this.service.acheterAngelUpgrade(this.world.name, upgrade.idcible).then((response) => {
+        this.service.applyBonus(this.world, upgrade);
+        this.world.activeangels -= upgrade.seuil;
+        upgrade.unlocked = true;
+      })
+    }
+  }
 
 
 }
