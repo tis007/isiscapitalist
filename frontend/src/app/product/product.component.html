@@ -7,24 +7,27 @@
       </div>
     </div>
     <div class="product_content">
-      <div class="product_gain"> {{ _product?.revenu }}
-        <!--            <app-my-progress-bar [run]="run" [auto]="auto"-->
-        <!--                                 frontcolor="#008800"-->
-        <!--                                 backcolor="#FFFFFF"-->
-        <!--                                 [orientation]="orientation"-->
-        <!--                                 [vitesse]="_product.vitesse"-->
-        <!--                                 [initialValue]="initialValue">-->
-        <!--            </app-my-progress-bar>-->
-
+      <div class="product_gain">
+        <app-my-progress-bar class="progress_bar"
+                             [run]="run"
+                             [auto]="_product.managerUnlocked"
+                             frontcolor="#559593"
+                             backcolor="#9ABFBE"
+                             [orientation]="orientation"
+                             [vitesse]="_product.vitesse"
+                             [initialValue]="initialValue">
+        </app-my-progress-bar>
+        <div class="revenue">{{ _product?.revenu }}</div>
       </div>
+
       <div class="product_price_content">
         <button class="product_price"
                 (click)="buyProduct()"
                 [ngClass]="{'affordable': _world.money >= _product.cout}">
           <span> Buy </span><span [innerHTML]="_product.cout | numberSuffix"></span></button>
         <div class="time">
-          <span *ngIf="_product?.timeleft !== 0">{{ _product?.timeleft | timeFormat }}</span>
-          <span *ngIf="_product?.timeleft === 0">{{ _product?.vitesse | timeFormat}}</span>
+          <span *ngIf="_product?.timeleft !== 0">{{ _product?.timeleft | date : 'mm:ss:SS'}}</span>
+          <span *ngIf="_product?.timeleft === 0">{{ _product?.vitesse | date : 'mm:ss:SS'}}</span>
         </div>
       </div>
     </div>

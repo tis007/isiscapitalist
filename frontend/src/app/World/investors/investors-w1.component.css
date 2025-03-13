@@ -83,6 +83,7 @@
   text-align: center;
   margin-right: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 .claim_btn:hover{
   background-color: #4E7372;

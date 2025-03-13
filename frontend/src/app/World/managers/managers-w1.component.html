@@ -30,11 +30,11 @@
      <div class="managercible"> {{ world.products?.[manager.idcible-1]?.name }} </div>
      <div class="managerseuil"> {{ manager.seuil}} </div>
    </div>
-   <div class="hire_btn">
+   <div class="hire_btn" [ngClass]="{'affordable': world.money >= manager.seuil}">
      <button type="button"
              class="btn"
-             [ngClass]="{'affordable': world.money >= manager.seuil}"
-             (click)="hireManager(manager)">Hire !</button>
+             [disabled]="manager.unlocked"
+             (click)="hireManager(manager)">{{ manager.unlocked ? 'Hired!' : 'Hire !' }}</button>
    </div>
  </div>
   </div>

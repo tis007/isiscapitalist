@@ -22,6 +22,7 @@
   all: unset;
   display: inline-block;
   cursor: pointer;
+  z-index: 9999
 }
 .description{
   padding: 10px;
@@ -55,7 +56,7 @@
   font-family: Orbitron;
   width: 90px;
   height: 63px;
-  background-color: #559593;
+  background-color: grey;
   border-radius: 12px;
   justify-content: center;
   align-content: center;
@@ -63,13 +64,39 @@
   margin-right: 20px;
   font-weight: bold;
 }
-.buy_btn:hover{
+.buy_btn button:disabled{
+  font-family: Orbitron;
+  width: 90px;
+  height: 63px;
+  background-color: grey;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: default;
+}
+.buy_btn.affordable{
+  font-family: Orbitron;
+  width: 90px;
+  height: 63px;
+  background-color: #559593;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.buy_btn.affordable:hover{
   background-color: #4E7372;
 }
 .btn{
   all: unset;
   display: inline-block;
-  cursor: pointer;
+
 }
 .content{
   display: grid;
@@ -105,6 +132,8 @@
   font-weight: bold;
   margin-top: -20px;
   margin-left: -20px;
+  cursor: pointer;
+
 }
 .upgrade_btn:hover{
   background-color: #4E7372;

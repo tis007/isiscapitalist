@@ -54,20 +54,43 @@ export class MyProgressBarComponent implements OnChanges, OnDestroy {
         }
     }
 
-    restartAnim() {
-        if (this.vitesse > 0 && this.run) {
-            if (this.animationRef.value !== 0) { cancelAnimationFrame(this.animationRef.value); }
-            const ref = this.canvasRef;
-            if (ref) {
-                this.ngZone.runOutsideAngular(() =>
-                    this.animate(ref, this.initialValue, this.orientation, this.vitesse,
-                        this.animationRef, this.auto, this.frontcolor, this.backcolor)
-                );
-            }
-        }
-    }
+  restartAnim() {
+    if (this.vitesse > 0 && this.run) {
+      if (this.animationRef.value !== 0) {
+        cancelAnimationFrame(this.animationRef.value);
+      }
 
-    ngOnDestroy() {
+      // Check if vitesse is too high
+      const vitesseThreshold = 500; // Adjust this threshold as needed
+      if (this.vitesse < vitesseThreshold) {
+        // Directly fill the progress bar if vitesse is too high
+        const ref = this.canvasRef;
+        if (ref) {
+          const ctx = ref.nativeElement.getContext('2d');
+          if (ctx) {
+            const width = ref.nativeElement.width;
+            const height = ref.nativeElement.height;
+
+            // Fill the progress bar immediately
+            ctx.fillStyle = this.frontcolor || '#008800';
+            ctx.fillRect(0, 0, width, height);
+          }
+        }
+      } else {
+        // Otherwise, animate the progress bar
+        const ref = this.canvasRef;
+        if (ref) {
+          this.ngZone.runOutsideAngular(() =>
+            this.animate(ref, this.initialValue, this.orientation, this.vitesse,
+              this.animationRef, this.auto, this.frontcolor, this.backcolor)
+          );
+        }
+      }
+    }
+  }
+
+
+  ngOnDestroy() {
         if (this.animationRef.value !== 0) { cancelAnimationFrame(this.animationRef.value); }
     }
 

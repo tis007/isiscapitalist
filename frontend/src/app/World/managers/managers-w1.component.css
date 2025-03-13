@@ -56,6 +56,31 @@
   font-family: Orbitron;
   width: 90px;
   height: 63px;
+  background-color: grey;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.hire_btn button:disabled{
+  font-family: Orbitron;
+  width: 90px;
+  height: 63px;
+  background-color: grey;
+  border-radius: 12px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: default;
+}
+.hire_btn.affordable{
+  font-family: Orbitron;
+  width: 90px;
+  height: 63px;
   background-color: #559593;
   border-radius: 12px;
   justify-content: center;
@@ -65,7 +90,7 @@
   font-weight: bold;
   cursor: pointer;
 }
-.hire_btn:hover{
+.hire_btn.affordable:hover{
   background-color: #4E7372;
 }
 .btn{

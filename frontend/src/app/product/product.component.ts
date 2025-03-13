@@ -1,9 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Palier, Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
-import {NgClass, NgIf} from '@angular/common';
+import {DatePipe, NgClass, NgIf} from '@angular/common';
 import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
 import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
+import {MyProgressBarComponent, Orientation} from './progressbar.component';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +12,9 @@ import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
     NgIf,
     TimeFormatPipe,
     NumberSuffixPipe,
-    NgClass
+    NgClass,
+    MyProgressBarComponent,
+    DatePipe
   ],
   templateUrl: './product.component.html',
   standalone: true,
@@ -75,6 +78,7 @@ export class ProductComponent implements OnInit {
         this._product.timeleft = this._product.vitesse - remainingTime;
         if (this._product.timeleft === 0) {
           this._product.timeleft = this._product.vitesse;
+
         }
       } else {
 
@@ -176,5 +180,20 @@ export class ProductComponent implements OnInit {
     });
 
   }
+  progressbarvalue=0;
+  setProgress(value: number) {
+    if (value >= 0 && value <= 100) {
+      this.progressbarvalue = value;
+    } else if (value < 0) {
+      this.progressbarvalue = 0;
+    } else {
+      this.progressbarvalue = 100;
+    }
+  }
+  //progress bar:
+  initialValue = 0
+  run = true
+  vitesse: number = 0
+  orientation = Orientation.horizontal
 }
 
