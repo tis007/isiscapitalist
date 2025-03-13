@@ -56,6 +56,9 @@ export class MainPageWorld1Component {
     } else if (this.multiplier === 10) {
       this.multiplier = 100;
       this.multiplierLabel = 'BUY x100';
+    } else if (this.multiplier === 100) {
+      this.multiplier = -1;
+      this.multiplierLabel = 'BUY max';
     } else {
       this.multiplier = 1;
       this.multiplierLabel = 'BUY x1';

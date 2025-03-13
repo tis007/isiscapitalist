@@ -24,10 +24,12 @@
         <button class="product_price"
                 (click)="buyProduct()"
                 [ngClass]="{'affordable': _world.money >= _product.cout}">
-          <span> Buy x {{multiplier}}</span><span [innerHTML]="_product.cout * multiplier | numberSuffix"></span></button>
+          <span> Buy x {{_multiplier === -1 ? calcMaxCanBuy() : _multiplier}}</span>
+          <span [innerHTML]="calculateTotalCost(_multiplier === -1 ? calcMaxCanBuy() : _multiplier) | numberSuffix"></span>
+        </button>
         <div class="time">
-          <span *ngIf="_product?.timeleft !== 0">{{ _product?.timeleft | date : 'mm:ss:SS'}}</span>
-          <span *ngIf="_product?.timeleft === 0">{{ _product?.vitesse | date : 'mm:ss:SS'}}</span>
+          <span *ngIf="_product?.timeleft !== 0">{{ _product?.timeleft | date : 'mm:ss:SS' }}</span>
+          <span *ngIf="_product?.timeleft === 0">{{ _product?.vitesse | date : 'mm:ss:SS' }}</span>
         </div>
       </div>
     </div>

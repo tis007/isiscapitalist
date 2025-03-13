@@ -10,7 +10,6 @@ import {MyProgressBarComponent, Orientation} from './progressbar.component';
   selector: 'app-product',
   imports: [
     NgIf,
-    TimeFormatPipe,
     NumberSuffixPipe,
     NgClass,
     MyProgressBarComponent,
@@ -21,11 +20,10 @@ import {MyProgressBarComponent, Orientation} from './progressbar.component';
   styleUrl: './product.component.css'
 })
 export class ProductComponent implements OnInit {
-  @Input() multiplier: number = 1;
 
-  _qtmulti = 'x1';
-  _product = new Product;
-  _world = new World;
+  _product = new Product();
+  _world = new World();
+  _multiplier = 1;
   protected server: string;
 
   ngOnInit() {
@@ -56,9 +54,9 @@ export class ProductComponent implements OnInit {
   }
 
   @Input()
-  set qtmulti(value: string) {
-    this._qtmulti = value;
-    if (this._qtmulti && this._product) this.calcMaxCanBuy();
+  set multiplier(value: number) {
+    this._multiplier = value;
+    if (this._multiplier && this._product) this.calcMaxCanBuy();
   }
 
   calcScore() {
@@ -110,11 +108,11 @@ export class ProductComponent implements OnInit {
   }
 
   buyProduct() {
-    let quantity = 1;
-    if (this._qtmulti === 'x10') quantity = 10;
-    else if (this._qtmulti === 'x100') quantity = 100;
-    else if (this._qtmulti === 'Max') quantity = this.calcMaxCanBuy();
+    let quantity = this._multiplier;
 
+    if (this._multiplier === -1) quantity = this.calcMaxCanBuy();
+
+    console.log(quantity)
     const cost = this.calculateTotalCost(quantity);
 
     if (cost <= this._world.money) {
