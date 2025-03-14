@@ -191,7 +191,7 @@ export class ProductComponent implements OnInit {
   }
   //progress bar:
   initialValue = 0
-  run = true
+  run = true //run si on l'achète
   vitesse: number = 0
   orientation = Orientation.horizontal
 }

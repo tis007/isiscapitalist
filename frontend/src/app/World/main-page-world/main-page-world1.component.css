@@ -66,6 +66,7 @@
   font-size: 150px;
 color: #E1D76E;
   margin-top: -70px;
+  cursor: pointer;
   span{
     color: black;
     position: absolute;

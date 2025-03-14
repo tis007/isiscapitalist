@@ -28,8 +28,8 @@
       <div class="Investors_bonus">Bonus per Angel <span>{{ world.angelbonus }}</span></div>
       <div class="Investors_active">Angels to claim <span>{{ calcAngelToClaim() }}</span></div>
     </div>
-    <div class="claim_btn">
-      <button type="button" class="btn" (click)="resetWorld()">Claim Angels !</button>
+    <div class="claim_btn" (click)="resetWorld()">
+      <button type="button" class="btn" >Claim Angels !</button>
     </div>
   </div>
 </div>
