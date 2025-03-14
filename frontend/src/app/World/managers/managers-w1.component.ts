@@ -36,10 +36,7 @@ export class ManagersW1Component {
       this.service.engagerManager(this.world.name, targetManager).then((response) => {
         this.world.money -= targetManager.seuil;
         targetManager.unlocked = true;
-        this.world.products[targetManager.idcible].managerUnlocked = true;
-
-        console.log(targetManager);
-        console.log(this.world.products[targetManager.idcible]);
+        this.world.products[targetManager.idcible - 1].managerUnlocked = true;
       });
     }
   }
