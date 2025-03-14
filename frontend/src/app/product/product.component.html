@@ -1,7 +1,7 @@
 <div>
   <div class="product_details" *ngIf="_product?.quantite !=0">
-    <div class="product_img">
-      <img [src]="server+_product?.logo" alt="logo" (click)="startFabrication()">
+    <div class="product_img" (click)="startFabrication()">
+      <img [src]="server+_product?.logo" alt="logo" >
       <div class="qte">
         {{ _product?.quantite }}
       </div>

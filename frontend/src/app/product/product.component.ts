@@ -2,7 +2,6 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Palier, Product, World} from '../schema';
 import {WebserviceService} from '../webservice.service';
 import {DatePipe, NgClass, NgIf} from '@angular/common';
-import {TimeFormatPipe} from '../../Pipes/time-format.pipe';
 import {NumberSuffixPipe} from '../../Pipes/number-suffix.pipe';
 import {MyProgressBarComponent, Orientation} from './progressbar.component';
 
@@ -68,6 +67,7 @@ export class ProductComponent implements OnInit {
     let moneyMade = 0;
     if (this._product.timeleft > 0) {
       if (this._product.managerUnlocked) {
+        this.run= true;
         //moneyMade = Math.floor(elapsedTime / this._product.vitesse);
         let productionCount = Math.floor((elapsedTime + this._product.vitesse - this._product.timeleft) / this._product.vitesse);
         const remainingTime = (elapsedTime + this._product.vitesse - this._product.timeleft) % this._product.vitesse;
@@ -141,6 +141,10 @@ export class ProductComponent implements OnInit {
     if (this._product.timeleft == 0) {
       this.service.lancerProduction(this._world.name, this._product).then(r => {
         this._product.timeleft = this._product.vitesse;
+        this.run = true;
+        setTimeout(() => {
+          this.run = false;
+        }, 10);
       });
     }
   }
@@ -191,7 +195,7 @@ export class ProductComponent implements OnInit {
   }
   //progress bar:
   initialValue = 0
-  run = true //run si on l'achète
+  run = false
   vitesse: number = 0
   orientation = Orientation.horizontal
 }
