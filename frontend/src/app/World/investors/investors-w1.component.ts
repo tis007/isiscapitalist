@@ -29,7 +29,8 @@ export class InvestorsW1Component {
 
   resetWorld() {
     this.service.resetWorld(this.service.user).then((response) => {
-      this.world = response.data.worldReset;
+      this.world = response.data.resetWorld;
+      window.location.reload();
     });
   }
 }
