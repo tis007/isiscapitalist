@@ -21,7 +21,7 @@ type Product {
     revenu: Float!
     vitesse: Float!
     quantite: Int!
-    timeleft: Int!
+    timeleft: Float!
     managerUnlocked: Boolean!
     paliers: [Palier!]!
 }
