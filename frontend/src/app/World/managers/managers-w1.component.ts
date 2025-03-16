@@ -38,6 +38,7 @@ export class ManagersW1Component {
         this.world.money -= targetManager.seuil;
         targetManager.unlocked = true;
         this.world.products[targetManager.idcible - 1].managerUnlocked = true;
+
       });
     }
   }
