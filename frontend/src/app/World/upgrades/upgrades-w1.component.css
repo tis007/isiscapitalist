@@ -24,6 +24,10 @@
   cursor: pointer;
   z-index: 9999
 }
+.close-btn-img{
+  border-radius: 9px;
+  width: 45px;
+}
 
 .description{
   padding: 10px;

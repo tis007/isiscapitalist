@@ -23,6 +23,10 @@
   display: inline-block;
   cursor: pointer;
 }
+.close-btn-img{
+  border-radius: 9px;
+  width: 45px;
+}
 .description{
   padding: 10px;
   text-align: center;

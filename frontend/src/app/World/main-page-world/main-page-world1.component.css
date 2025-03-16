@@ -10,8 +10,9 @@
 }
 .navbarImage {
   img {
-    width: 245px;
-    margin-left: 45px;
+    width: 272px;
+    margin-left: 19px;
+    margin-bottom: -2px;
   }
 }
 .sidebar{

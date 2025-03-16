@@ -41,4 +41,9 @@ export class ManagersW1Component {
       });
     }
   }
+
+  refreshPage() {
+      // Refresh the page after the modal closes
+      window.location.reload();
+  }
 }

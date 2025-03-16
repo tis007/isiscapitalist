@@ -4,7 +4,10 @@
   align-items: center;
   padding: 20px;
 }
-
+.close-btn-img{
+  border-radius: 9px;
+  width: 45px;
+}
 .title {
   font-family: Orbitron;
   align-items: center;
