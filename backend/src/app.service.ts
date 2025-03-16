@@ -1,9 +1,8 @@
-import {Injectable, Logger} from '@nestjs/common';
+import {Injectable} from '@nestjs/common';
 import * as fs from 'fs';
 import * as path from 'path';
 import {Palier, Product, World} from "./graphql";
 import {origworld} from "./origworld";
-import {AppController} from "./app.controller";
 
 @Injectable()
 export class AppService {
@@ -152,17 +151,24 @@ export class AppService {
                 this.applyBonusForProduct(world, product, palier);
             });
         }
+
+        if (palier.idcible === -1) {
+            world.angelbonus += palier.ratio;
+        }
     }
 
     applyBonusForProduct(world: World, product: Product, palier: Palier) {
         switch (palier.typeratio) {
             case "gain":
+                console.log("gain");
                 product.revenu *= palier.ratio;
                 break;
             case "vitesse":
+                console.log("vitesse");
                 product.vitesse /= palier.ratio;
                 break;
             case "ange":
+                console.log("ange");
                 world.angelbonus += palier.ratio;
                 break;
         }
@@ -258,13 +264,13 @@ export class AppService {
                 let productionCount = Math.floor((elapsedTime + product.vitesse - product.timeleft) / product.vitesse);
                 const remainingTime = (elapsedTime + product.vitesse - product.timeleft) % product.vitesse;
 
-                moneyMade += productionCount * product.revenu * product.quantite * (1 + world.activeangels *(world.angelbonus/100));
+                moneyMade += productionCount * product.revenu * product.quantite * (1 + world.activeangels * (world.angelbonus / 100));
 
                 product.timeleft = product.vitesse - remainingTime;
             } else {
                 if (product.timeleft > 0) {
                     if (product.timeleft <= elapsedTime) {
-                        moneyMade += product.revenu * product.quantite * (1 + world.activeangels *(world.angelbonus/100));
+                        moneyMade += product.revenu * product.quantite * (1 + world.activeangels * (world.angelbonus / 100));
 
                         product.timeleft = 0;
                     } else {

@@ -108,11 +108,10 @@ export class ProductComponent implements OnInit {
   }
 
   buyProduct() {
-    let quantity = this._multiplier;
 
-    if (this._multiplier === -1) quantity = this.calcMaxCanBuy();
+  const quantity = this._product.quantite === 0 ? 1 : (this._multiplier === -1 ? this.calcMaxCanBuy() : this._multiplier);
+  const cost = this.calculateTotalCost(quantity);
 
-    const cost = this.calculateTotalCost(quantity);
 
     if (cost <= this._world.money) {
       this.service.acheterQtProduit(this._world.name, this._product, quantity).then(r => {
