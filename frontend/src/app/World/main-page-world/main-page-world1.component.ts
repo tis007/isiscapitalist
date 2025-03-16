@@ -40,6 +40,7 @@ export class MainPageWorld1Component {
     service.getWorld(this.service.user).then(
       world => {
         this.world = world.data.getWorld;
+        console.log(world.data.getWorld)
         this.updateBadges();
       });
 

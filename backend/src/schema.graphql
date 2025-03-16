@@ -13,12 +13,13 @@ type Palier {
     unlocked: Boolean!
 }
 type Product {
-    id: Int!name: String!
+    id: Int!
+    name: String!
     logo: String!
     cout: Float!
     croissance: Float!
     revenu: Float!
-    vitesse: Int!
+    vitesse: Float!
     quantite: Int!
     timeleft: Int!
     managerUnlocked: Boolean!
