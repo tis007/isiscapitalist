@@ -35,16 +35,12 @@ export class ManagersW1Component {
 
     if (targetManager && this.world.money >= targetManager.seuil) {
       this.service.engagerManager(this.world.name, targetManager).then((response) => {
-        this.world.money -= targetManager.seuil;
-        targetManager.unlocked = true;
-        this.world.products[targetManager.idcible - 1].managerUnlocked = true;
-
+        if (response.error === undefined) {
+          this.world.money -= targetManager.seuil;
+          targetManager.unlocked = true;
+          this.world.products[targetManager.idcible - 1].managerUnlocked = true;
+        }
       });
     }
-  }
-
-  refreshPage() {
-      // Refresh the page after the modal closes
-      window.location.reload();
   }
 }

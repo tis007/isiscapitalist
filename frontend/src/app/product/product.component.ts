@@ -117,7 +117,6 @@ export class ProductComponent implements OnInit {
     if (cost <= this._world.money) {
       this.service.acheterQtProduit(this._world.name, this._product, quantity).then(r => {
 
-        console.log(r)
         if (r.error === undefined) {
           this.onBuy.emit(cost);
           this.updateCost(quantity);

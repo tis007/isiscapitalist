@@ -32,9 +32,12 @@ export class UpgradesW1Component {
   buyUpgrade(upgrade: Palier) {
     if (upgrade.seuil <= this.world.money) {
       this.service.acheterCashUpgrade(this.world.name, upgrade).then((response) => {
-        this.service.applyBonus(this.world, upgrade);
-        this.world.money -= upgrade.seuil;
-        upgrade.unlocked = true;
+
+        if (response.error === undefined) {
+          this.service.applyBonus(this.world, upgrade);
+          this.world.money -= upgrade.seuil;
+          upgrade.unlocked = true;
+        }
       })
     }
   }
@@ -42,9 +45,11 @@ export class UpgradesW1Component {
   buyAngelUpgrade(upgrade: Palier) {
     if (upgrade.seuil <= this.world.activeangels) {
       this.service.acheterAngelUpgrade(this.world.name, upgrade).then((response) => {
-        this.service.applyBonus(this.world, upgrade);
-        this.world.activeangels -= upgrade.seuil;
-        upgrade.unlocked = true;
+        if (response.error === undefined) {
+          this.service.applyBonus(this.world, upgrade);
+          this.world.activeangels -= upgrade.seuil;
+          upgrade.unlocked = true;
+        }
       })
     }
   }
