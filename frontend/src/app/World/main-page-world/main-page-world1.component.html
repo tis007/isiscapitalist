@@ -22,13 +22,25 @@
 
             <li class="nav-link">
               <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#upgradesModal">
-                <span>Upgrades</span>
+                <button  mat-raised-button
+                         color="primary"
+                         [matBadge]="upgradesBadge"
+                         [matBadgeHidden]="upgradesBadge==0"
+                >
+                  Upgrades
+                </button>
               </a>
             </li>
 
             <li class="nav-link">
-              <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#managersModal" >
-                <span>Managers</span>
+              <a type="button" class="btn custom-btn" data-bs-toggle="modal" data-bs-target="#managersModal">
+                <button  mat-raised-button class="boutonManagers" type="button"
+                         color="primary"
+                         [matBadge]="managersBadge"
+                         [matBadgeHidden]="managersBadge==0"
+                >
+                  Managers
+                </button>
               </a>
             </li>
 

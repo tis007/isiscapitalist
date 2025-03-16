@@ -15,7 +15,8 @@ import {NgClass, NgForOf} from '@angular/common';
 })
 export class ManagersW1Component {
   constructor(private service: WebserviceService) {
-    this.server = service.server
+    this.server = service.server;
+
   }
 
   world: World = new World();

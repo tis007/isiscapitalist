@@ -51,8 +51,20 @@
   font-family: EXO2;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-}
+  height: 54px;
 
+}
+:host ::ng-deep .mat-badge-content{ /* pour forcer le style */
+  background-color: #235957;
+  color: #ffffff;
+  font-size: 13px !important;
+  border-radius: 16px !important;
+  margin-left: 10px !important;
+  width: 22px !important;
+  height: 23px !important;
+  margin-bottom: -13px !important;
+  align-content: center !important;
+}
 .sidebar .menu-links li a:hover {
   background: #559593;
 }
