@@ -59,7 +59,7 @@
           <div class="upgradesname"> {{ upgrade?.name }}</div>
           <div class="upgradescible"> {{ world.products?.[upgrade.idcible - 1]?.name }} profits x {{ upgrade?.ratio }}
           </div>
-          <div class="upgradeseuil"> {{ upgrade?.seuil }}</div>
+          <div class="upgradeseuil" [innerHTML] ="upgrade.seuil | numberSuffix" ></div>
         </div>
         <div class="buy_btn"
              (click)="buyUpgrade(upgrade)"
@@ -83,8 +83,8 @@
         </div>
         <div class="content">
           <div class="upgradesname"> {{ upgradeAngel?.name }}</div>
-          <div class="upgradescible"> {{ world.products?.[upgradeAngel.idcible - 1]?.name }}</div>
-          <div class="upgradeseuil"> {{ upgradeAngel?.seuil }}</div>
+          <div class="upgradescible"> {{ world.products?.[upgradeAngel.idcible+1]?.name }} profits x{{upgradeAngel.ratio}}</div>
+          <div class="upgradeseuil"> {{ upgradeAngel?.seuil }} Angels</div>
         </div>
         <div class="buy_btn" (click)="buyAngelUpgrade(upgradeAngel)"
              [ngClass]="{'affordable': world.activeangels >= upgradeAngel.seuil}">

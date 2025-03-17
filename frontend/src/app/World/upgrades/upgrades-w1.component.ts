@@ -2,14 +2,16 @@ import {Component, Input} from '@angular/core';
 import {WebserviceService} from '../../webservice.service';
 import {Palier, World} from '../../schema';
 import {NgClass, NgForOf, NgIf} from '@angular/common';
+import {NumberSuffixPipe} from "../../../Pipes/number-suffix.pipe";
 
 @Component({
   selector: 'app-upgrades-w1',
-  imports: [
-    NgForOf,
-    NgIf,
-    NgClass
-  ],
+    imports: [
+        NgForOf,
+        NgIf,
+        NgClass,
+        NumberSuffixPipe
+    ],
   templateUrl: './upgrades-w1.component.html',
   standalone: true,
   styleUrl: './upgrades-w1.component.css'
