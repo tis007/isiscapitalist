@@ -2,10 +2,18 @@
 <div class="startPageContent">
   <h1 class="game_name">isis Capitalist</h1>
   <div class="credentials">
-  <input class="form-control" type="text" placeholder="Enter Your Name" [(ngModel)]="userName">
-  </div>
-  <div class="startbtn">
-    <button type="button" class="btn btn-success" (click)="startGame()">start</button>
+    <div>
+      <input class="form-control" type="text" placeholder="Enter Your Name" [(ngModel)]="userName"
+             (blur)="validateInput()"
+             [class.is-invalid]="inputTouched && showMessage" required>
+      <div *ngIf="inputTouched && showMessage" class=" mt-1 small " style="color: darkred;">
+        Please enter your username !
+      </div>
+    </div>
+    <div class="startbtn mt-3">
+      <button type="button" class="btn btn-success" (click)="startGame()">Start</button>
+    </div>
+
   </div>
 </div>
 </div>

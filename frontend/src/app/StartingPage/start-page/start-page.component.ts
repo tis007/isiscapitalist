@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
+import {NgIf, NgOptimizedImage} from '@angular/common';
 import {Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {WebserviceService} from '../../webservice.service';
@@ -8,7 +8,8 @@ import {WebserviceService} from '../../webservice.service';
   selector: 'app-start-page',
   imports: [
     NgOptimizedImage,
-    FormsModule
+    FormsModule,
+    NgIf
   ],
   templateUrl: './start-page.component.html',
   standalone: true,
@@ -18,9 +19,17 @@ export class StartPageComponent {
  constructor(private router : Router, private service: WebserviceService) {
  }
   userName: string = '';
+  showMessage: boolean = false;
+  inputTouched: boolean = false;
+
+  validateInput() {
+    this.inputTouched = true;
+    this.showMessage = !this.userName.trim();
+  }
   startGame() {
+    this.validateInput();
+    if (this.showMessage) return;
     this.service.user = this.userName;
-   //on ajoute une condition selon l'utilisateur pour la redirection vers le bon monde
-    this.router.navigate(['/mainPageWorld1'])
+    this.router.navigate(['/mainPageWorld1']);
   }
 }
