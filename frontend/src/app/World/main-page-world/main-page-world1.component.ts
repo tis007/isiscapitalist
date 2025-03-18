@@ -37,7 +37,7 @@ export class MainPageWorld1Component {
   product: Product = new Product();
   constructor(private service: WebserviceService) {
     this.server= service.server
-    service.getWorld(this.service.user).then(
+    service.getWorld().then(
       world => {
         this.world = world.data.getWorld;
         console.log(world.data.getWorld)

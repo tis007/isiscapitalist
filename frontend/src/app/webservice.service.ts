@@ -17,7 +17,15 @@ import {
 })
 export class WebserviceService {
   server = 'http://localhost:3000/';
-  user = 'Toto';
+  // user :string = 'Toto';
+
+  get user(): string {
+    return localStorage.getItem('user') || '';
+  }
+
+  set user(value: string) {
+    localStorage.setItem('user', value);
+  }
 
   createClient() {
     return new Client({
@@ -26,8 +34,8 @@ export class WebserviceService {
     });
   }
 
-  async getWorld(user: string) {
-    const response = await this.createClient().query(GET_WORLD, {"user": user}).toPromise();
+  async getWorld() {
+    const response = await this.createClient().query(GET_WORLD, {"user": this.user}).toPromise();
     console.log('Response:', response);
     return response;
   }
